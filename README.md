@@ -17,3 +17,15 @@ git config --global user.name marenalj
 git config --global user.email jorquera2009@hotmail.com
 git config --global -l
 ¨¨
+## Crear repositorio / clonar repositorio
+
+1. Crear repositorio nuevo
+```shell
+git init [<nombre>]
+```
+
+2. Clonar un repositorio existente
+```shell
+git clone <enlace al repositorio en github>
+```
+Siempre crea una nueva carpeta en el punto en que se ejecuta

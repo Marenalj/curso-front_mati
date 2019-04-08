@@ -11,3 +11,8 @@ margin-inline-start: 0px;
 margin-inline-end: 0px;
 font-weight: bold;
 }
+
+.content-wrapper {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}

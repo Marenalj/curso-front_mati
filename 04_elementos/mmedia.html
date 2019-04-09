@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aitor Gajardo">
+    <meta name="description" content="Ejercicios del curso Web FrontEnd">
+    <meta name="keywords" content="web, HTML, desarrollo front">
+    <!-- Tienen importancia, pero no trascendental, en los buscadores. Antes se les podía engañar, pero ahora a Google no se le puede engañar porque con sus algoritmos de SEO ve si coinciden las palabras clave con el resto de la página -->
+    <meta name="generator" content="Visual Studio Code">
+    <!-- Suele ser donde le indicamos el tipo de programa que hemos usado para generar nuestra web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Este es un formato de metadato que ya no se utiliza (el formato al que me refiero es http-equiv) -->
+    <title>Mmedia - Curso</title>
+    <!-- Es requisito indispensable que cualquier documento HTML tenga title, porque si no, no nos validará la web -->
+    <!-- <style></style> puede ir aquí aunque no es recomendable -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        console.log('Hola Mundo')
+    </script> <!-- Esto nos sirve para escribir JS -->
+    <script src="./js/app.js"></script>
+    <!-- Una vez que un script tiene un src ignora lo que hay entre las etiquetas de apertura y de cierre -->
+</head>
+
+<body>
+    <header>
+        <!-- Nos permite definir mucho mejor la estructura de nuestra web -->
+        <h1>Elementos de HTML ☢️αβγ</h1> <!-- Se pintan bien porque usan UNICODE -->
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <!-- Esto hace que no haga nada y se quede donde estamos sin recargar la página -->
+                <li><a href="./index.html#bloques">En bloque</a></li>
+                <li><a href="./index.html#en_linea">En línea</a></li>
+                <li><a href="#">Multimedia</a></li>
+                <!-- La mejor manera de enlazar cuando se hacen páginas web son las referencias relativas al documento. Así, movamos a donde movamos nuestra web mientras mantengamos nuestra estructura de carpetas interna nos servirá. -->
+            </ul>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+        <main>
+            <section>
+                <header>
+                    <h2>Elementos embebidos multimedia</h2>
+                </header>
+                <p>Veremos cómo utilizar:</p>
+                <ul>
+                    <li>Imágenes
+                        <ul>
+                            <li>jpg</li> <!-- Surgió a posteriori, tiene muy buen equilibrio entre calidad y peso. No tienen excesiva calidad, pero para la web son suficientes. Están comprimidas con un algoritmo -->
+                            <li>gif</li> <!-- Formato antiguo que guarda las imágenes con una paleta de colores bastante restringida. Gif puede tener transparencias y puede tener animaciones (estas dos últimas no las tiene jpeg) -->
+                            <li>png</li> <!-- Tiene dos variantes: el de 8 bits (es para pocos colores, porque solo puede guardar 256 colores, pero mejora al gif. Tiene una transparencia de canal alfa, que permite porcentajes en las transparencias) y el de 24 (como un jpeg, con mucha más calidad y con mucho más peso también) -->                            
+                            <li>(webp)</li> <!-- Formato nuevo que está promocionando Google y que es el que entiende Chrome. No es un estándar, pero lo soportan Firefox y Edge. -->
+                            <li>svg</li>
+                        </ul>
+                    </li>
+                    <li>Vídeo y Audio
+                        <ul>
+                            <li>mp4</li>
+                            <li>ogg</li>
+                            <li>webm</li>
+                        </ul>
+                    </li>
+                    <li>Elementos de navegación gráficos</li>
+                </ul>
+            </section>
+            <h3>Imágenes</h3>
+            <img src="./assets/SU47.jpg" alt="avión Suhkoi Su-47 sobrevolando Siberia">
+            <img src="./assets/su33.png" alt="perfil avión Suhkoi Su-33 Flanker con escarapela de la Federación Rusa">
+        </main>
+        <aside id="publicidad">
+            <p>Publicidad</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus laboriosam quibusdam, beatae
+                asperiores nihil voluptatem consectetur deleniti harum earum omnis cum ipsa commodi blanditiis veniam
+                provident exercitationem consequatur magni?</p>
+            <p>Ea quasi itaque, vitae omnis veritatis in officia perferendis iste quaerat, odio reprehenderit amet
+                animi. Repellat tempora aliquam a dolorum voluptas corporis, dolorem fugit reiciendis quas odit, aliquid
+                voluptatum blanditiis.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <address>Aitor Gajardo - CIFE©</address>
+    </footer>
+</body>
+
+</html>

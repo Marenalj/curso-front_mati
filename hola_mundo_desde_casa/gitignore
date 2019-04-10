@@ -1,5 +1,0 @@
-node_modules/ 
-# Excluimos una carpeta
-node_modules/
-# Excluimos los ficheros correspondientes al patron
-*.log

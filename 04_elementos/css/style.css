@@ -1,15 +1,14 @@
 body {
-    background-color: antiquewhite
+    background-color: orange; 
 }
 
-.h1{
-display: block;
-font-size: 2em;
-margin-block-start: 0.67em;
-margin-block-end: 0.67em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-font-weight: bold;
+.h1 {
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 .content-wrapper {
@@ -22,14 +21,14 @@ font-weight: bold;
 }
 
 img, embed {
-    width:  45%;
-}
+    width: 45%;
+} /* Con esto hacemos que la imagen ocupe toda la página y que dependiendo de cómo sea nuestra ventana, la imagen se adapte manteniendo la relación de aspecto o ratio */
 
-figure{
+figure {
     margin: 0;
     padding: 0;
 }
 
-video{
-    width: 100%
+video {
+    width: 100%;
 }

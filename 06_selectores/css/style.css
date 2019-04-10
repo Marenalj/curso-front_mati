@@ -1,23 +1,26 @@
-/* Selector u operador de descendientes: operador es el espacio*/
+/* Siempre se lee de derecha a izquierda */
 
+/* Selector de descendientes : operador es el espacio */ 
 section p {
-    color: blueviolet;
+    color: steelblue;
 }
 
-/* Selector de hijo : operador > (ejemplo:p*2>lorem) */
+/* Selector de hijo : operador es > .Este se usa cuando hay que hacer menús */
 
 section>p {
-    color: brown;
+    color: violet;
 }
 
-/* Selector de hermanos: que usa el operador ~ (virgulilla) Esto prácticamente no se usa */
+/* A partir de aquí no se utilizan casi */
+
+/* Selector de hermanos : operador es ~ (virgulilla) */
 
 div~p {
-    color: aqua
+    color: silver;
 }
 
-/* Selector de hermanos adyacentes que utiliza como operador el signo +  Esto prácticamente no se usa*/
+/* Selector de hermanos adyacentes : operador es + */
 
 div+p {
-    color: darkgoldenrod;
+    color: chocolate;
 }

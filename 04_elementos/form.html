@@ -45,9 +45,74 @@
                     <li>botones</li> 
                 </ul>
                 <h3>Ejemplo de formulario</h3>
-                <form action="https://jsonplaceholder.typicode.com/users" method="post">
-                    <input type="text" name="name" id="nombre" placeholder="Nombre">
-                    <button type="submit">Sent</button>               
+                <form action="https://jsonplaceholder.typicode.com/users" method="post"><!-- Se puede poner el fomulario organizado en distintas líneas con ul y li; con un div para cada input y/o con p -->
+                    
+                    <div>
+                    <button type="submit">Sent</button>
+                    </div> 
+                    <fieldset>
+                        <legend>Datos personales</legend><!-- Formulario con cuadraditos -->
+                        <label for="">Correo</label>
+                        <input type="email" name="passwd" id="">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Condiciones
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et commodi suscipit dolorum sequi vitae ipsam at ad, aliquam asperiores impedit doloribus ex culpa in illum repudiandae, incidunt quis sunt! Libero!</p>
+                        </legend>
+                        <div>
+                            <input type="checkbox" name="Aceptado" id="Aceptado"> required
+                            <label for="Aceptado">Estoy de acuerdo</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos del curso</legend>
+                        <div>
+                            <label for="">Curso</label>
+                            <select name="Curso" id="Curso"> multiple> <!-- `multiple´ es un atributo de select que no se suele usar nunca -->
+                                <optgroup><label for="Front">   
+                                        <option value="&nbsp"></option><!-- puedes darle a value valor nada o darle un valor. Es mejor dejarlo en blanco pero el validator va a dar error. Por lo tanto le puedes dar un & -->
+                                        <option value="HTML">HTML</option><!-- El value es opcional por lo que puedo quitarlo. Si no pongo value sale lo que tenga puesto en la etiqueta. O no pongo value o les pongo a todos value -->
+                                        <option value="css">CSS</option>
+                                </optgroup>
+                                <optgroup><label for="Back">
+                                        <option value="JavaScript">JavaScript</option>
+                                        <option value="JV">Java</option>
+                                        <option value="Node">JS</option>
+                                </optgroup>
+                            </div>
+                            <div>
+                                <p>Sede</p>
+                                <input type="radio" name="sede" id="Madrid"> required
+                                <label for="Madrid">Madrid</label>
+                                <input type="radio" name="sede" id="Barcelona">
+                                <label for="Barcelona">Barcelona</label>
+                                <input type="radio" name="sede" id="Sevilla">
+                                <label for="Sevilla">Sevilla</label>
+                            </div>  
+                            <fieldset>
+                                <div>
+                                    <button type="submit">Enviar</button>
+                                    <button type="reset">Borrar</button>
+                                </div>
+                            </fieldset>                          
+                            </select>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label for="nombre">Nombre</label><!-- para que el programa entienda a quién hace ref el nombre hay que ponerle for que tiene que coincidir con el id -->
+                        <input type="text" name="name" id="nombre" placeholder="Nombre">
+                        </div>
+                        <div>
+                        <input type="email" name="email" id="email" placeholder="Correo">
+                        </div> 
+                        <div>
+                            <label for="passwd">Contraseña</label>
+                            <input type="password" name="passwd" id="passwd">
+                        </div>
+                        <div>
+                            <label for="">Comentarios</label>
+                            <textarea name="coments" id="coments" cols="30" rows="5"></textarea>
+                        </div>       
                 </form>
 
                 <!-- La mejor manera de enlazar cuando se hacen páginas web son las referencias relativas al documento. Así, movamos a donde movamos nuestra web mientras mantengamos nuestra estructura de carpetas interna nos servirá. -->

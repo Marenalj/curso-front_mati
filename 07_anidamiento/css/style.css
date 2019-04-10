@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body>header {
+    background-color: darkgoldenrod; 
+    color: cornsilk;
+    padding: 2rem;
+}
+
+body>header h1 {
+    margin-bottom: 0;
+    margin-top: 0%;
+
+body>header p {
+margin-bottom: 0;
+margin-top: 0.2rem%;
+}
+
+body>div {
+    margin:2rem;
+}
+
+h1 {
+    margin: 0%;
+    padding: 1%;
+}
+
+body>footer {
+    background-color: black;
+    color: aqua;
+    padding-top: 1.2rem;
+    scroll-padding-bottom: 1.5rem;
+    text-align: center;
+}

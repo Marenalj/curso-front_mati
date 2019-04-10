@@ -1,0 +1,36 @@
+/*Selector de cualquier etiqueta y agrupados usando una coma y decirle: h1 y además h2  color: brown (o el que sea) */
+
+h1, h2{
+    color: burlywood;
+}
+
+/*Selectores de id
+Buena práctica: NO SE USAN
+*/
+h1 {
+    color: salmon
+}
+
+h2 {
+    color: salmon
+}
+
+/* la # es un modificador (id) */ 
+
+#p01 {
+    color: aqua;
+}
+
+/* Selectores de clase */
+
+.resaltado {
+    color: aquamarine;
+}
+[name="nombre"] 
+{
+    background-color: aqua;
+}
+
+[required] {
+    border:1px salmon;
+}

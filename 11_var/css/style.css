@@ -1,0 +1,53 @@
+/* Las variables me van a servir para ver de forma homogénea las características de mi página web. Por ejemplo: los márgenes, color de fondo. Variables: --color-fondo: y/o --colo-letra:  y el nombre del color. Así tengo una paleta de colores donde manejo los colores de mi página web. Como se lo he asignado a la variable ya tengo el color elegido por mí.    */
+
+:root {
+    --color-fondo: rgb(58, 9, 9);
+    --color-letra: rgb(202, 128, 37);
+    --margen-base: 2rem;
+}
+
+/* Hay una función      calc     me permite hacer una operación de cálculo entre dos elementos.       
+
+.main-header-p {
+    margin-bottom: 0;
+    margin-top: calc(var(--margen-base / 10);  
+
+*/
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: tomato;
+    color: aqua;
+    padding: 2rem;
+}
+
+/* Esto actúa como espacio de nombres. Es una manera de anidar */
+
+.main-header-h1 { 
+    margin: 0;
+    padding: 0;
+}
+
+.main-header-p {
+    margin-bottom: 0;
+    margin-top: calc(var(--margen-base / 10);  
+}
+
+.content-wrapper {
+    margin: calc(var(--margen-base / 10);
+}
+
+.main-footer {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}

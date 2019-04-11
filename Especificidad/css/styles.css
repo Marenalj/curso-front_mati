@@ -1,0 +1,9 @@
+/* body .resaltado {} sería resalta todo lo que esté dentro de body. A igual especificidad siempre el que esté el último.
+a: número de estilos en línea; b: es igual al número de id´s; c: es igual al número de otros atributos y pseudo-clases y d: número de elementos y pseudo-elementos.
+ 1.id; 2.clase; 3.elemento y 4.atributo.
+importan predomina hasta en los estilos en línea */
+
+body.resaltado {
+    background-color: darkgreen;
+    color: black;
+}

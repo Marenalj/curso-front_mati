@@ -1,0 +1,75 @@
+/* Nombres de seudoelementos siempre ::*/
+/* La primera letra de cada línea en mayúsculas */
+
+section p::first-letter {
+    font-size: 4rem;
+}
+/* aplica la negrita a la primera línea */
+aside p::first-line {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* todos los párrafos dentro de un dir y dentro de un párrafo. Dentro de las comillas podría poner cualquier texto (Atención: importante */
+section div p::before {
+    content: "!!";
+}
+
+/* seudo clases son como clases pero en lugar de escribir class, las seudoclases son contextuales. Le pasa algo; cuando alguien le pone el ratón encima se pondrá el texto en el color elegido. Interactividad del usuario*/
+p:hover {
+    color: aqua
+}
+
+/* cuando ya has visitado un link el color cambiará a crimson */
+a:visited {
+    color: crimson
+}
+/* los a cuando están visitados o no les ponga en el mismo color. cuando ponga coma quiere decir a con visited y a sin visited les salga el mismo color */
+a, a:visited {
+    color: blue
+}
+/* nth-child es orden de hijo. dentro de la sección, el primer hijo me lo pinte de azul. todos los párrafos que estén dentro de cualquier cosa, el primer hijo, me lo pinte de azul. Si pongo section, busca el primer párrafo que sea primer hijo de section. */
+
+section p:nth-child(1) {    
+    color: blue
+}
+
+/* significa también primer hijo pero del tipo comentado aquí. El primer hijo de tipo párrafo. () acepta números acepta también add/odd*/
+section p:nth-of-type(even) {    
+    color: blue
+}
+/* el último hijo de lo que sea */
+p:last-child  {
+    color: darkgreen
+}
+
+/* selector * es el selector universal. display: inline todos los elementos pierden su condición de bloque. * {display: inline}.
+El asterisco significa "todo". Hay propiedades que se heredan y otras que no. Queremos cambiar la fuente, por ejemplo, serifa y sin serifa . Las sans serif son las letras de palo. Las sans serif más modernas. Las letras display son letras de presentación, más exóticas y que no se deben usar para hacer el cuerpo de un texto (titular de comics), h1, h2 y como mucho h3. Handwriting no son letras para texto, son decorativas. Las letras monospace en la que todas las letras tienen el mismo espacio. El formato de pre ya da formato conservado. Una página web suele utilizar dos o tres tipos de letra  */
+*/
+/* quién quiero que tenga la letra lato o lobster?? Se lo digo a body y a header. font- family por si google retira este tipo de letra o esté corrompido el fichero... Como las letras se heredan yo no tengo que decir al párrafo qué letra tiene porque lo heredan del body. El borde no se hereda. Se lo estamos poniendo a body y lo que se hereda se hereda y lo que no, no se hereda. 
+* {font-family: 'Lato', sans-serif;
+    border: 1px solid
+}
+ Con * en vez de body se lo pondría a todo el borde. Es un ejemplo de herencia. La fuente se hereda y el borde no se hereda. */
+
+body {
+    font-family: 'Lato', sans-serif;
+    border: 1px solid
+}
+
+
+header {
+    font-family: 'Lobster', cursive;
+}
+
+
+/* Modificador not es una seudoclase que me permite  */
+
+*:not(p) {
+    color: aqua
+}
+
+/* Elemento p, la selector specificity 0,0,1 (b es igual al número de id´s; c es igual al número de otros atributos y pseudo-clases; d es igual al número de elementos y pseudo-elementos  */
+p {
+
+}

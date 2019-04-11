@@ -1,0 +1,41 @@
+/* Cuando yo le digo un     width     le estoy aplicando el ancho al contenido del elemento. La propiedad se llama border box. 
+el      *box-sizing: border-box       es la maravilla de las maravillas. Decide si la ref width es sólo a lo que está del borde hacie adentro. content-box      es el espacio que va de dentro hacia al borde*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* margin: 1rem; Si doy márgenes en porcentajes */
+
+
+p {
+    width: 18%; 
+    float: left;
+    margin: calc(calc(100% - calc(15*5)) / 10);
+    padding: 1rem;
+    background-color: rgb(88, 175, 88);
+    border: 1px solid;
+}
+
+.clearfix {
+    clear: both;
+}
+.real {
+    margin: 2rem
+}
+
+/*  Si eres un buen maquetador, esto es muy importante */
+
+.real p {
+    float: left;
+    width: 33.33%;
+}
+    
+.real p:not(:first-child) {
+    padding-left: 1rem;
+}

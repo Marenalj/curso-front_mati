@@ -1,0 +1,17 @@
+/* Si en     font-size: pongo 16px;     porque al fijar un valor absoluto por cuestiones de accesibilidad no se debe utilizar porque para alguien que no ve bien no lo va a ver más grande. Siempre hay que usar     1em      .  */
+
+
+section {
+    font-size: 0.9em;
+    div {
+        font-size: 0.9em;
+    }
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    padding: 2em;
+}
+
+/* Los em´s son siempre proporcionales a la letra de la letra padre.  Los em´s no son estables, por eso puedo utilizar     rem´s     para que el tamaño sea proporcional a la letra del elemento. */

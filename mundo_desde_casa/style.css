@@ -1,0 +1,26 @@
+body {
+    background-color: azure ;
+}
+.content-wrapper {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+h1 {
+    color: black;
+    text-align: left;
+}
+h2 {
+    color: black
+    
+}
+h3 {
+    color: black;
+}
+p {
+    color: black;
+    font-family: verdana;
+    font-size: 20px;
+} 
+p {
+    background-color: blue;
+} 

@@ -5,6 +5,13 @@ section {
     font-size: 0.9em;
     div {
         font-size: 0.9em;
+        background-color: aqua;
+        min-height: 10vh;
+        
+         /* overflow: scroll;
+         overflow: hidden lo que sobre se esconde y no hay forma de que lo veas;
+        overflow: auto; scroll es lo mismo que auto; overflow: visible es como no poner nada. Se desborda.
+        Pero yo también puedo querer que el texto tenga una altura mínima. En vez de height, si le pongo min-height: 80vh. Cuando hay más de min se ignora la función. min-height es mejor que usar un scroll. Contenedor que tenga como mínimo un tamaño determinado */
     }
 }
 
@@ -14,4 +21,8 @@ p {
     padding: 2em;
 }
 
-/* Los em´s son siempre proporcionales a la letra de la letra padre.  Los em´s no son estables, por eso puedo utilizar     rem´s     para que el tamaño sea proporcional a la letra del elemento. */
+/* 
+wh ---Viewport units: vw, vh, vmin, vmax
+vw ---Viewport units: vw, vh, vmin, vmax
+ */
+s em´s son siempre proporcionales a la letra de la letra padre.  Los em´s no son estables, por eso puedo utilizar     rem´s     para que el tamaño sea proporcional a la letra del elemento. */

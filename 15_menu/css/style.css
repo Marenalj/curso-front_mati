@@ -1,3 +1,7 @@
+*, *::before, *::after, *::before {
+    box-sizing: border-box
+}
+/* el * puede ser after o before, entonces se pondrá *, *::before, *::after, *::before        en vez de * solito    */
 body {
     margin: 0;
     padding: 0;
@@ -17,7 +21,6 @@ body {
     position: relative;
 }
 
-
 .main-header-h1 { 
     margin: 0;
     padding; 0;
@@ -25,11 +28,45 @@ body {
 
 .main-header-p {
     margin-bottom: 0;
-    margin-top: 0,2rem;  
+    margin-top: 0,2rem;
+   /*  display: none; */
+   visibility: hidden;
+}
+
+.main-header:hover p {
+   /*  display: initial; */
+   visibility: initial;
 }
 
 .content-wrapper {
     margin: 2rem;
+    overflow: auto;
+    background-color: cadetblue;
+}
+/*    .content-wrapper:after {
+       content: "";
+       display: block;  
+       }  
+    Esta forma es más sofisticada aunque son lo mismo*/
+
+.main-content {
+    width: 70%;
+    float: left;
+    background-color: cyan;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+.main-aside {
+    width: 30%;
+    float: left;
+    padding-left: 1rem;
+    background-color: cadetblue;
+}
+
+.clearfix {
+    clear: both;
+    margin-bottom: 2rem;
 }
 
 .main-footer {

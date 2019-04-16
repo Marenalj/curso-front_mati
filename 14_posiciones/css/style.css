@@ -1,23 +1,24 @@
+.content-wrapper {
+    margin: 2rem;
+}
+
 section {
-  /*   position: relative; */
+   position: relative;
 }
 
 section p {
     padding: 1rem;
-    background-color: aquamarine;
+    background-color: coral;
 }
 
-.relative {
+.relativo {
     position: relative;
     top: 3rem;
     left: 3rem;
-
 }
-/* los elementos, su espacio es relativo a las coordenadas que ocupaban anteriormente, es decir, desde su posición anterior. Tiene memoria al espacio que ocupan. En el plano relativo lo demás no se mueve porque guarda la memoria del espacio que ocupaba. */
 
-.absolute {
+.absoluto {
     position: absolute;
     top: 3rem;
     left: 3rem;
 }
-/* El absoluto se ha movido a una capa por encima. Y los demás se mueven porque ocupan el espacio que sobra. No se conseva memoria del espacio. La referencia es desde el margen 3rem para abajo. Por lo tanto, el párrafo se va a ir hacia arriba. Al ponerlo en el plano absoluto todo lo demás se me va a mover. */

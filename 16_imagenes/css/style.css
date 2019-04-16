@@ -1,0 +1,24 @@
+img {
+/*     width: fit-content; */
+       max-width: 100%;            /*   Esto significa que la imagen sale al 100% de sí misma.  */
+}
+
+p {
+    text-align: justify;
+}
+
+.image-wrapper-50 {        
+    width: 50%;
+    /* float: left; 
+    margin-right: 1rem;   */                      /* la imagen flota en medio de los párrafos  */
+    float: right;
+    margin-right: 1rem;
+}
+
+.image-wrapper-25 {
+    width: 25%;
+}
+
+.image-wrapper-75 {
+    width: 75%;
+}

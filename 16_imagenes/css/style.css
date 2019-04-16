@@ -12,7 +12,7 @@ p {
     /* float: left; 
     margin-right: 1rem;   */                      /* la imagen flota en medio de los párrafos  */
     float: right;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .image-wrapper-25 {
@@ -21,4 +21,26 @@ p {
 
 .image-wrapper-75 {
     width: 75%;
+}
+
+.clearfix {
+    border-top: 1px solid gainsboro;
+}
+
+.fondos {
+    height: 100vh;
+    background-color: #4C90D9;
+    background-image: url(../assets/3boats.jpg);
+    background-repeat: no-repeat;
+/*     background-size: contain;    */
+    background-size: cover;                 /* cúbreme todo el espacio disponible pero respetando la proporcionalidad de la imagen */
+    background-blend-mode: soft-light;
+}
+ 
+.fondos h2 {
+    text-align: center;
+/*     line-height: 100vh; */
+    padding-top: 25vh;
+    color: #191814 ;
+    opacity: 1;
 }

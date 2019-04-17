@@ -1,3 +1,7 @@
+*, *::after, *::before, *:after, *:before {
+    box-sizing: border-box
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -23,6 +27,13 @@ body {
 .main-header p {
     margin-bottom: 0;
     margin-top: 0.2rem;
+    /* display: none; */
+    visibility: hidden;
+}
+
+.main-header:hover p {
+    /* display: initial; */
+    visibility: initial;
 }
 
 .menu ol, .menu ul {
@@ -54,49 +65,58 @@ body {
     padding: 1rem;
 }
 
-/* layout con display table
- */
-
+/* Layout con display table */
+ 
 .content-wrapper {
     margin: 2rem;
-    display: table;
+    display: table;    
 }
 
-.mail.aside {
-    display: table-column;
-    width: 30%;
+.main-content {
+    display: table-cell;
+    width: 70%;
     background-color: bisque;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-/* CSS de la tabla  */
+.main-aside {
+    display: table-cell;
+    width: 30%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: gainsboro;
+    border: 1px solid
+}
+
+/* CSS de la tabla*/
+
 table {
     width: 100%;
-    empty-cells: hide;            /* si quiero que no se muestre ese cuadro. */
-    border-collapse: collapse;     /* border colapsados. em empty-cells ya no funciona con los bordes colapsados */
+    empty-cells: hide;
+    border-collapse: collapse;
 }
 
 table:hover {
     border-collapse: separate;
 }
 
-
-
 td, th {
     border: 1px solid;
 }
 
 
-/* .main-footer {
+/* CSS del footer*/
+
+.main-footer {
     background-color: brown;
     color: bisque;
     padding-top: 1.2rem;
     padding-bottom: 1.5rem;
     text-align: center;
-} */
+}
 
-/* .social-menu {
+.social-menu {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.5rem
@@ -104,4 +124,4 @@ td, th {
 
 .social-menu li {
     display: inline;
-} */
+}

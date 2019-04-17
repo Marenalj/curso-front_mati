@@ -1,7 +1,8 @@
 *, *::after, *::before, *:after, *:before {
     box-sizing: border-box
 }
-/* reseteo de los valores del body y fuente general*/
+
+/* Reseteo de los valores del body y fuente general */
 body {
     margin: 0;
     padding: 0;
@@ -9,9 +10,13 @@ body {
 }
 
 .main-header {
-    padding: 2rem;
+    background-color: brown;
+    color: bisque;
+    padding: 1rem 2rem 1rem 2rem;
+    font-family: 'Permanent Marker', cursive;
 }
-/* reseteo de los valores de h1 */
+
+/* Reseteo de los valores de h1*/
 .main-header h1 {
     margin: 0;
     padding: 0;
@@ -23,7 +28,9 @@ body {
     /* display: none; 
     visibility: hidden; */
 }
-/* reseteo de los valores genéricos de cualquier menú */
+
+/* Reseteo de los valores genericos de cualquier menu*/
+
 .menu ol, .menu ul {
     list-style: none;
     margin: 0;
@@ -34,7 +41,8 @@ body {
     color: inherit;
     text-decoration: none;    
 }
-/* menú principal */
+
+/* Menu principal */
 .main-menu {
     border: 1px solid;
     border-radius: 5px;
@@ -43,7 +51,6 @@ body {
 }
 
 .main-menu ol {
-    
     display: flex;
 }
 
@@ -52,15 +59,9 @@ body {
     padding: 0.7rem 1rem;
 }
 
-/* Layout con display flex */
- 
-/* .content-wrapper {
-    margin: 2rem;
-    display: flex;    
-} */
-/* Secciones principales */
+/* Secciones principales  */
+
 .main-content {
-   
     background-color: bisque;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -97,8 +98,6 @@ td, th {
 .main-footer {
     background-color: brown;
     color: bisque;
-    padding-top: 1.2rem;
-    padding-bottom: 1.5rem;
     padding-top: 0.8rem;
     padding-bottom: 0.5rem;
     text-align: center;
@@ -115,34 +114,38 @@ td, th {
 }
 
 @media screen and (min-device-width: 640px) {
-    .mail-header {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
-@media screen and (min-device-width: 920px){
-    /* layout con display flex. Layout es la disposición de los elementos mediante capas. */
+@media screen and (min-device-width: 920px) {
+    /* Layout con display flex */
 
-.content-wrapper {
+    .main-header {
+        padding: 2rem;
+    }
+    
+    .content-wrapper {
         margin: 2rem;
         display: flex;    
     }
-}
 
-.main-content {
-    width: 70%;
-    /* Atajo para flex-grow, flex-shrink flex-basis */
-     /* flex: 3 1 10% */
-}
+    .main-content {
+        width: 70%;   
+        /*  Atajo para flex-grow, flex-shrink flex-basis */
+        /* flex: 3 1 10%; */
+    }
 
-.main.aside {
-    width: 30%;
-    /*  flex: 1 3 10% */
-}
+    .main-aside {
+        width: 30%;
+        /* flex: 1 3 10%; */
+    }
 
-.main.footer {
-    padding-top: 1.2rem;
-    padding-bottom: 1.5rem;
+    .main-footer {
+        padding-top: 1.2rem;
+        padding-bottom: 1.5rem;
+    }
 }

@@ -6,36 +6,32 @@ el      *box-sizing: border-box       es la maravilla de las maravillas. Decide 
 }
 
 body {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
-
-/* margin: 1rem; Si doy márgenes en porcentajes */
-
-
-p {
-    width: 18%; 
+.cuadrados p {
+    width: 18%;
     float: left;
-    margin: calc(calc(100% - calc(15*5)) / 10);
+    margin: calc(calc(100% - calc(18%*5)) / 10);
     padding: 1rem;
-    background-color: rgb(88, 175, 88);
-    border: 1px solid;
+    background-color: coral;
+    border: 1px solid; 
 }
 
 .clearfix {
     clear: both;
 }
-.real {
-    margin: 2rem
-}
 
-/*  Si eres un buen maquetador, esto es muy importante */
+.real {
+    margin: 2rem;
+}
 
 .real p {
     float: left;
     width: 33.33%;
 }
-    
+
 .real p:not(:first-child) {
-    padding-left: 1rem;
+    padding-left: 1.5rem;
 }
+ 

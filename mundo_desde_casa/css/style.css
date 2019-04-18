@@ -1,5 +1,5 @@
 body {
-    background-color: azure ;
+    background-color: rgb(86, 136, 136);
 }
 .content-wrapper {
     margin-left: 2rem;
@@ -9,6 +9,13 @@ h1 {
     color: black;
     text-align: left;
 }
+
+menu.ol {
+    color: black;
+    text-align: center;
+}
+    
+
 h2 {
     color: black
     
@@ -16,6 +23,10 @@ h2 {
 h3 {
     color: black;
 }
+div p {
+    align-self: auto
+}
+
 p {
     color: black;
     font-family: verdana;

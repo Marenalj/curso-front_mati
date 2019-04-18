@@ -1,9 +1,10 @@
 body {
     background-color: rgb(78, 170, 78);
+    font-size: 16px;
 }
 
 p a {
-    color: azure;
+    color: black;
 }
 
 a {
@@ -13,4 +14,10 @@ a {
 a[href="http://www.falconmaster.com"] {
     color: red;
     font-size: 30px;
+}
+
+div p {
+    background: rgb(73, 105, 73);
+    color: black;
+    width: 100%;
 }

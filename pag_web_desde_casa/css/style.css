@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(78, 170, 78);
+}
+
+p a {
+    color: azure;
+}
+
+a {
+    color: black;
+}
+
+a[href="http://www.falconmaster.com"] {
+    color: red;
+    font-size: 30px;
+}

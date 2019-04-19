@@ -1,6 +1,7 @@
 body {
-    background-color: rgb(78, 170, 78);
     font-size: 16px;
+    background: url(../assets/sunset-1373171_960_720.jpg);
+    background-attachment: fixed;
 }
 
 p a {
@@ -12,12 +13,24 @@ a {
 }
 
 a[href="http://www.falconmaster.com"] {
-    color: red;
+    color: black;
     font-size: 30px;
 }
 
 div p {
-    background: rgb(73, 105, 73);
+    width: 200px;
+    background: mediumslateblue;
     color: black;
-    width: 100%;
+    margin: 2px 3px;
+    padding: 1px;
+    border: 2px solid;
+    display: inline-block;
+}
+div class {
+    background-color: burlywood;
+    
+}
+
+div h3 p {
+    background-color: darkgrey;
 }

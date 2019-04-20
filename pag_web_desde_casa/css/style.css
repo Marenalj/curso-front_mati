@@ -17,7 +17,30 @@ a[href="http://www.falconmaster.com"] {
     font-size: 30px;
 }
 
-div p {
+div {
+    width: 100px;
+    height: 100px;
+    background: blue; 
+    color: white;
+    font-size: 30px;
+    float: left;
+}
+/* .caja padre {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: black;
+}
+ */
+.caja {
+    position: static;
+/*     top: 100px;
+    bottom: 0px;
+    right: 0px;
+    left: 120px;
+} */
+
+/* div p {
     width: 200px;
     background: mediumslateblue;
     color: black;
@@ -33,4 +56,4 @@ div class {
 
 div h3 p {
     background-color: darkgrey;
-}
+}  */

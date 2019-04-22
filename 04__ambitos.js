@@ -5,7 +5,7 @@
 // Ámbito global. var1 tiene un ámbito global
 
 let var1 = 20
-function prueba() 
+prueba() 
 
 // He hecho una función pero no la he ejecutado          function prueba() { console.log(var1)}
 //MUY MALA PRÁCTICA

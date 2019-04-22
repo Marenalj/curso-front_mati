@@ -14,7 +14,7 @@ function duplicar(x) {
 }
 
 
-let user = (nombre: 'Pepe', edad: 23)
+let user = (nombre= 'Pepe', edad= 23)
 matricular(user)
 console.log(user)
 

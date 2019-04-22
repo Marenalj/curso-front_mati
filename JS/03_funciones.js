@@ -5,8 +5,8 @@ function suma(x, y) {
 
 // las funciones se rellenan con parámetros, que es un valor (texto). La función mostrar no devuelve nada. Muestra algo.
 
-function mostrar(texto) {
-    console.log(texto)
+function mostrar (texto) {
+    console.log (texto)
 }
 
 // el ámbito de esta variable está dentro del ámbito del programa pero fuera de la función. Result devuelve el valor de la variable r.

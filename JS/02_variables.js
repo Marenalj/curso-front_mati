@@ -7,7 +7,13 @@ let edad = 34   //declarar e inicializar
 
 
 //Tipos de datos (lo que hay al otro lado del =)
+/* En otros lenguajes hay declaración EXPLÍCITA y OBLIGATORIA de tipos 
+int x -> variable x de tipo entero sin valor. En JS los números siempre son NUMBERS.
 
+En Js los tipos son:
+- débiles: no se declaran explícitamente; son IMPLÍCITOS al valor. (x=23 débil y estático)
+- dinámicos: pueden cambiar
+*/
 
 // undefined
 let data

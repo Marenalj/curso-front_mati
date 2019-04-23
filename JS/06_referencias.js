@@ -6,18 +6,24 @@ console.log(data)
 console.log(duplicar(data))
 
 // Los datos primitivos pasan a la función como valores. Son inmutables. Destruyen un valor y toman otro nuevo. 
-//Los objetos son mutables porque una vez creados pueden cambiar sin distruir nada
+//Los objetos son mutables porque una vez creados pueden cambiar sin destruir nada
 
 function duplicar(x) {
     x = x  * 2
     return x
 }
 
+// objeto user; variable matricular; devuelve un objeto que tiene nombre, edad y curso. user es un objeto interno de la función.
+let user1 = {nombre: 'Pepe', edad: 23}
+matricular(user1, 'HTML')
+console.log(user1)
+let user2 = {nombre: 'Rosa'}
+matricular(user2)
+console.log(user2)
 
-let user = (nombre= 'Pepe', edad= 23)
-matricular(user)
-console.log(user)
 
-function matricular(obj) {
-    obj.curso = 'JavaScript'
+//obj es una variable exterior a la función. obj.curso sería igual a curso porque es la propiedad del objeto y también la variable.
+
+function matricular(obj, curso = 'JavaScript') {
+    obj.curso = curso
 }

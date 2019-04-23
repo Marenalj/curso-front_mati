@@ -1,4 +1,4 @@
-// 'use strict'           modo estricto
+// 'use strict' - modo estricto
 
 // Ámbitos o Scope de las variables
 
@@ -13,7 +13,7 @@ prueba()
 
 
 // Las funciones tienen que ser independientes. Si cambio la variable, tengo que cambiarla dentro de la función
-// Lo mismo con BUENAS PRÁCTICAS
+// Lo mismo con BUENAS PRÁCTICAS. Parámetro (variable un poco especial): x, que tendrá el valor de var2. El parámetro va entre paréntesis. No se usan nunca nombres que oculten lo que llevan dentro. No es una función pura porque depende del valor de var, que es un valor de fuera.
 
 let var2 = 30
 pruebaBien(var2)
@@ -22,8 +22,8 @@ function pruebaBien (x) {
     console.log(x)
 }
 
-// Nuevo en ES6 usar    let       en lugar de        var
-// La variable let ext = 22 es local a la función
+// Nuevo en ES6 usar let en lugar de var
+// La variable let ext = 22 es local a la función. Si te declaro dentro de la función, eres local a la función.
 
 
 function condicional() {

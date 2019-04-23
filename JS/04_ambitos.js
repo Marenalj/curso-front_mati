@@ -7,7 +7,8 @@
 let var1 = 20
 prueba() 
 
-// He hecho una función pero no la he ejecutado          function prueba() { console.log(var1)}
+// He hecho una función pero no la he ejecutado          
+function prueba() { console.log(var1)}
 //MUY MALA PRÁCTICA
 //No se accede nunca a las variables globales desde las funciones
 
@@ -35,7 +36,7 @@ function condicional() {
     }
     console.log(ext)
     /* console.log(data)  */      //daría un error 
-    
+}  
 
 condicional()
 

@@ -35,7 +35,7 @@ function condicional() {
     }
     console.log(ext)
     /* console.log(data)  */      //daría un error 
-    }
+    
 
 condicional()
 

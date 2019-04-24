@@ -79,3 +79,6 @@ console.log(user.nombre)
       'No se admiten menores de edad'
   ]
   console.log(mensajes[i])
+
+
+ 

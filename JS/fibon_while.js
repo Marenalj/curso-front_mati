@@ -51,6 +51,7 @@ addEventListener('load', function()  {
                generarFibonacci(n);
                mostrarArray(arrayFibonacci);
         }   else {
+            
             console.log('El número introducido no es un entero > 0');
         }    
     }

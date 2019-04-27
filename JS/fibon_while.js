@@ -7,7 +7,7 @@
 addEventListener('load', function()  {
       
     function ejecutarPrograma() {
-        let n = parseInt(promt('Números Fibonacci:');
+        let n = parseInt(promt('Números Fibonacci:'));
         /* if (Number.isInteger(n) && n = 0) {         //n >= 1    o    n > 0
                let arrayFibonacci =
                generarFibonacci(n);

@@ -7,7 +7,7 @@
 addEventListener('load', function()  {
       
     function ejecutarPrograma() {
-        let n = parseInt(promt('Cantidad de números:');
+        let n = parseInt(promt('Números Fibonacci:');
         /* if (Number.isInteger(n) && n = 0) {         //n >= 1    o    n > 0
                let arrayFibonacci =
                generarFibonacci(n);
@@ -17,8 +17,9 @@ addEventListener('load', function()  {
             console.log('El número introducido no es un entero > 0');
         }    
     }
-
-    function generar Fibonacci(n) {
+ 
+    function generarFibonacci(n) {
+  
         let f0 = 0;
         let f1 = 1;
         let fn = null;
@@ -36,6 +37,7 @@ addEventListener('load', function()  {
              f1 = fn;
              console.log(fn);
              i++;
+         }
             /**
  *    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...
  *    fnum  = f(n - 1) + f(n - 2)

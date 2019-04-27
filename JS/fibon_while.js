@@ -14,7 +14,7 @@ addEventListener('load', function()  {
                mostrarArray(arrayFibonacci); */
                mostrarFibonacci(n);
         }   else {
-            console.log('El número introducido no es un entero > 0');
+            console.log('El número introducido no es entero > 0');
         }    
     }
  
@@ -58,7 +58,7 @@ addEventListener('load', function()  {
         }    
     }
 
-    function generar Fibonacci(n) {
+    function generarFibonacci(n) {
         let fn = [0, 1]
          if (n <= 1) {
              return fn;

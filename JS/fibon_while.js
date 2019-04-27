@@ -7,13 +7,14 @@
 addEventListener('load', function()  {
       
     function ejecutarPrograma() {
-        let n = parseInt(promt('Números Fibonacci:'));
-        /* if (Number.isInteger(n) && n = 0) {         //n >= 1    o    n > 0
+        /* let n = parseInt(promt('Números Fibonacci:'));
+        if (Number.isInteger(n) && n = 0)) {         //n >= 1    o    n > 0
                let arrayFibonacci =
                generarFibonacci(n);
-               mostrarArray(arrayFibonacci); */
-               mostrarFibonacci(n);
+               mostrarArray(arrayFibonacci); 
+               mostrarFibonacci(n); */
         }   else {
+            return n
             console.log('El número introducido no es entero > 0');
         }    
     }

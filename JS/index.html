@@ -7,10 +7,11 @@
     <title>fibonacci</title>
 </head>
 <body>
-        <script type="text/javascript">
-            function pickUpLimit(callback) {
-                    const limit = prompt('Introduce the limit');
-                    return callback(limit);
+      <!-- este tipo es un callback síncrono, que es llamar a una función cuando ha terminado una tarea (cuando termines la primera línea de código empiezas con la siguiente)  -->
+      <script type="text/javascript">
+            function pickUpLimit() {
+                    const limit = parseInt(document.getElementById('limit').value);
+                    console.log(fibonacci(limit));
                 }
                 
                 function fibonacci(limit) 
@@ -25,8 +26,9 @@
                     }
                 };
     
-                console.log(pickUpLimit(fibonacci));
          </script>  
+         <input id="limit"/>
+         <button onclick="pickUpLimit()">Introduzca el límite superior para calcular la función de Fibonacci</button>
 </body>
 </html>
 

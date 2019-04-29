@@ -1,4 +1,5 @@
    /**
+<<<<<<< HEAD
  *    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...
  * 
  * function saludar(nombre) {
@@ -13,9 +14,21 @@
  */
 
 
+=======
+ *         
+ * 
+ * El del profe:
+ 
+>>>>>>> ccef24b3ff2a38d0d99a3de3adf31b6733b01de8
  /**
+  * 
+  *   El mío:
+  *   0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...
+  *   fnum  = f(n - 1) + f(n - 2)
+  *   cuando n >= 2                (que sería igual que n > 1) 
+  * 
   * La primera iteración siempre te va a devolver un 0 y un 1
-  * La segunda iteración va a entrar dentro del while porque el límite no es 1 y el Array va a ser igual al Fibonacci de la iteración 1. 
+  * La segunda iteración va a entrar dentro del while porque el límite no es 1 y el Array va a ser igual al Fibonacci de la iteración 1
   *  let fibonacciArray = fibonacci(1);
   * Cada iteración suma los dos anteriores
   * 

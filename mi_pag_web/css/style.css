@@ -1,10 +1,21 @@
 body {
     font-size: 16px;
-    background: url(../assets/sunset-1373171_960_720.jpg);
+    background: url(../assets/playa-de-isuntza-lekeitio__1280x720.jpg);
 /* El fondo se queda fijo y lo que se mueve son los elementos */
     background-attachment: fixed;
     
 }
+
+h1 {
+    text-align: right;
+    margin-right: 1em;
+}
+
+h2 {
+    text-align: right;
+    margin-right: 1.4em;
+}
+
 
 p a {
     color: black;

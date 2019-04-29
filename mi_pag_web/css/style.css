@@ -1,9 +1,11 @@
 body {
     font-size: 16px;
-    background: url(../assets/playa-de-isuntza-lekeitio__1280x720.jpg);
+    background: url(../assets/line-blue-white.jpg);
 /* El fondo se queda fijo y lo que se mueve son los elementos */
     background-attachment: fixed;
-    
+
+
+
 }
 
 h1 {

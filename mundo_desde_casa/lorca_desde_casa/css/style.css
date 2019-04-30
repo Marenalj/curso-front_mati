@@ -1,6 +1,13 @@
 body {
-    background-color: rgb(86, 136, 136);
+    background-color: rgb(120, 145, 145);
 }
+
+nav {
+    position: absolute;
+    top: 2px;
+    right: 35px;
+}
+
 .content-wrapper {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -29,6 +36,8 @@ div p {
 
 .imagenes {
     float: left;
+    margin-right: 1em;
+    margin-left: 2.5em;
 }
 
 .paco_rabal_la_sangre_derramada {
@@ -44,7 +53,4 @@ p {
     color: black;
     font-family: verdana;
     font-size: 20px;
-} 
-p {
-    background-color: blue;
-} 
+}

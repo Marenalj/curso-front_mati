@@ -4,6 +4,9 @@ body {
 /* El fondo se queda fijo y lo que se mueve son los elementos */
     background-attachment: fixed;
 
+img {
+    margin-right: 2px;
+}
 
 
 }

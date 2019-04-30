@@ -24,7 +24,20 @@ h3 {
     color: black;
 }
 div p {
-    align-self: auto
+    align-self: auto;
+}
+
+.imagenes {
+    float: left;
+}
+
+.paco_rabal_la_sangre_derramada {
+    display: flex;
+    width: 100%;
+
+}
+.paco_rabal_la_sangre_derramada iframe {
+    justify-content: center;
 }
 
 p {

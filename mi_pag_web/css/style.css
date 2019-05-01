@@ -1,17 +1,20 @@
 body {
     font-size: 16px;
-    background: url(../assets/line-blue-white.jpg);
-/* El fondo se queda fijo y lo que se mueve son los elementos */
-    background-attachment: fixed;
+    background: rgb(160, 172, 196);
+
+}
 
 h1 {
-    text-align: right;
+    text-align: center;
 }
 
 h2 {
-    text-align: right;
+    text-align: center;
 }
 
+img {
+    
+}
 
 p a {
     color: black;
@@ -54,13 +57,11 @@ div p {
     display: inline-block;
 }
 
-
-
 .main-footer {
-    background-color: cyan;
+    background-color: cornflowerblue;
     color: black;
-    padding-top: 1.2rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
 }
 
@@ -70,4 +71,6 @@ div p {
     font-size: 1.5rem
 }
 
-
+.social-menu li {
+    display: inline;
+}

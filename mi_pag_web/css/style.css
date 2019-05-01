@@ -4,21 +4,12 @@ body {
 /* El fondo se queda fijo y lo que se mueve son los elementos */
     background-attachment: fixed;
 
-img {
-    margin-right: 2px;
-}
-
-
-}
-
 h1 {
     text-align: right;
-    margin-right: 1em;
 }
 
 h2 {
     text-align: right;
-    margin-right: 1.4em;
 }
 
 
@@ -30,10 +21,6 @@ a {
     color: black;
 }
 
-a[href="http://www.falconmaster.com"] {
-    color: black;
-    font-size: 30px;
-}
 /* 
 div {
     width: 100px;
@@ -60,18 +47,27 @@ div {
  */
 div p {
     width: 200px;
-    background: mediumslateblue;
     color: black;
     margin: 2px 3px;
     padding: 1px;
     border: 2px solid;
     display: inline-block;
 }
-div class {
-    background-color: burlywood;
-    
+
+
+
+.main-footer {
+    background-color: cyan;
+    color: black;
+    padding-top: 1.2rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
 }
 
-div h3 p {
-    background-color: darkgrey;
+.social-menu {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem
 }
+
+

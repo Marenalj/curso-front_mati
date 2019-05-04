@@ -16,10 +16,17 @@ header nav {
 }
 header nav ul {
     list-style: none;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 header nav ul li {
     float: left;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
 }
 header nav ul li a {
     padding: 10px 20px;
@@ -51,6 +58,8 @@ aside {
 footer {
     background; black;
     color: black;
-    clear: both;   /* limpian los float: left; y da como un salto de línea. */
+/* limpian los float: left; y da como un salto de línea. */
+    clear: both;   
     padding: 10px 0px;
+
 }

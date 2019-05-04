@@ -18,6 +18,9 @@ h1 {
 }
 
 .main-menu {
+    float: right;
+    margin-left: 1em;
+    margin-right: 1em;
     border: 1px solid;
     border-radius: 5px;
 }

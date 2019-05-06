@@ -27,3 +27,16 @@ function validarEmail(email) {
 
 console.log(validarEmail('jorquera2009@hotmail.com'));
 
+
+
+
+
+
+
+
+/* var texto = "jorquera2009@hotmail.com";
+var nuevoTexto = texto.indexOf("j")
+ 
+console.log(j)
+ */
+

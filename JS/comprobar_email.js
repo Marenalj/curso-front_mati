@@ -14,8 +14,7 @@
 /* var n = string.indexOf("@");
  */
 
-function validarEmail() {
-    const email = 'jorquera2009@hotmail.com';
+function validarEmail(email) {
     const validEmail = email.indexOf('@') != -1 && email.indexOf('.') != -1;
     if (validEmail) {
 
@@ -26,5 +25,5 @@ function validarEmail() {
     }
 }
 
-console.log(validarEmail());
+console.log(validarEmail('jorquera2009@hotmail.com'));
 

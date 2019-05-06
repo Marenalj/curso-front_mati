@@ -21,6 +21,11 @@ let user1 = {
     altura: 179
 }
 
+// palabra reservada this. Dentro de los métodos una función es intercambiable.
+
+// let usser1 = new Object()
+// user1.nombre = 'Pepe'
+
 let user2 = {
     nombre: 'Rosa', 
     edad: 27,
@@ -29,7 +34,7 @@ let user2 = {
 
 user1.nombre = 'Mati'
 user1.curso = 'Back'
-// a estas funciones se les llama métodos (función saludar  saludar: function () {console.log(`Hola, soy ${this.nombre}`)    }  )
+// a estas funciones se les llama métodos (función saludar       saludar: function () {console.log(`Hola, soy ${this.nombre}`)    }  )
 // sirven para tener bloques de información estructurada
 
 user1.saludar()

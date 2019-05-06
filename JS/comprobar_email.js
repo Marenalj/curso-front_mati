@@ -9,8 +9,6 @@
  * nombre usuario + @ + servidor + dominio
  */
 
-
-
 /* var n = string.indexOf("@");
  */
 

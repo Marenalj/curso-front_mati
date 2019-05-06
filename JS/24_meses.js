@@ -5,7 +5,6 @@
  * 
  * El mes ... en inglés se dice ..."para cada uno de los meses"
  */
-
 let mesesEnIngles = {
     enero: 'January',
     febrero: 'February',

@@ -29,5 +29,7 @@ function main() {
     //console.log(urlTemp)
 
     console.log(Url.split('/')[2])
+
+    console.log(url[12])
 }
 main()

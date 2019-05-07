@@ -32,4 +32,12 @@ function main() {
 
     console.log(url[12])
 }
+
 main()
+
+
+/**
+ * Tengo una cadena de caracteres y quiero saber si está en mayúsculas o en minúsculas
+ * 
+ */
+

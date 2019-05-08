@@ -25,9 +25,9 @@ function numeroAlAzar100() {
      for (let i = 0; i < limite; i++) {
          r[i] = numeroAlAzar100()
      }
-        } 
+        
      return r
- 
+ } 
  console.log(aleatorios(12))
 
 /**
@@ -48,14 +48,16 @@ function prueba() {
     /**Sort() ordena alfabéticamente los elementos de un array. Por defecto el orden es alfabético y ascendente (A ->)
      * reverse ordena en sentido contrario (inverso a su posición original)   */
     
-    let temp = datos.slice(0)
+     // temp = datos // copiar referencias
+     // CLONAR UN ARRAY
+    let temp = datos.slice()
     // temp.sort() Ordena alfabéticamente
     temp.sort((a, b) => a - b)  // ordena numéricamente
     console.clear()
     console.log('Esto es temp')
     console.log(temp)
     console.log('Esto es datos')
-    console.log(datos.join())
+    console.log(datos)
 }
 
 prueba()

@@ -1,25 +1,8 @@
    /**
-<<<<<<< HEAD
- *    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...
- * 
- * function saludar(nombre) {
-  alert('Hola ' + nombre);
-   }
-
- * 
- * 
- * @param: limit
- * @returns: fibonacciArray
- * 
- */
-
-
-=======
  *         
  * 
  * El del profe:
  
->>>>>>> ccef24b3ff2a38d0d99a3de3adf31b6733b01de8
  /**
   * 
   *   El mío:

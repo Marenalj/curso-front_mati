@@ -14,7 +14,7 @@
      let r = true
      let cadenaSinEspacios = cadena.split(' ').join('').toLowerCase()
      // console.log(cadenaSinEspacios)
-     let cadenaAlReves = cadenaSinEspacios.split('').reverse().join('').toLowerCase()
+     let cadenaAlReves = cadenaSinEspacios.split('').reverse().join('')
      // console.log(cadenaAlReves)
      if (cadenaSinEspacios !== cadenaAlReves) {
         r = false
@@ -23,7 +23,7 @@
  }
 
 function isPaliShort(cadena = '') {
-    return cadena.split(' ').join('').toLowerCase() === cadena.split(' ').join
+    return cadena.split(' ').join('').toLowerCase() === cadena.split(' ').join('').toLowerCase().split('').reverse().join('') ? true: false
 }
 
 
@@ -31,17 +31,17 @@ function isPaliShort(cadena = '') {
 //let prueba = function() 
 (function () {
      let textos = [
-         'Esto no es un palíndromo'
-         'A ti no bonita'
+         'Esto no es un palíndromo',
+         'A ti no bonita',
          'Atar a la rata'
      ]
      for (let i = 0; i < textos.length; i++) {
-         const texto = textos[1]
+         const texto = textos[i]
          console.log(texto)
 
 
-         console.log(isPali(texto))
+         console.log(isPaliShort(texto))
      }
- }}()
+ })()
 
  //probar()

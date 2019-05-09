@@ -1,3 +1,18 @@
+Date.prototype.toStringEnEspañol =  function () {
+    const aDias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
+    const aMeses = [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+               'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ]
+    let fechaToString = ''
+    console.log('This')
+    console.log(this)
+    fechaToString +=  aDias[this.getDay()] + ', '
+    fechaToString += this.getDate() + ' de '
+    fechaToString += aMeses[this.getMonth()] + ' de '
+    fechaToString += this.getFullYear()
+    return fechaToString
+};
+
+
 (function() {
     let hoy = new Date()
     console.log(hoy)
@@ -12,8 +27,9 @@
     console.log(nacim.toLocaleString())
     console.log(nacim.toDateString())
     console.log(nacim.getDay())
-    console.log(fechaEnEspañolToString(nacim))
-    // console.log(nacim.toStringEnEspañol())
+    //console.log(fechaEnEspañolToString(nacim))
+    console.log(nacim.toStringEnEspañol())
+    console.log(hoy.toStringEnEspañol())
  
 }) ()
 

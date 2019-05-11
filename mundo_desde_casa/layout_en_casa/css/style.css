@@ -11,7 +11,7 @@ header, .main, footer {
     margin: 20px auto;
 }
 header nav {
-    background: cyan;
+    background: rgb(98, 98, 121);
     overflow: hidden;    /* nos limpia nuestros floats */
 }
 header nav ul {
@@ -27,7 +27,7 @@ header nav ul li {
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
-}
+
 header nav ul li a {
     padding: 10px 20px;
     display: block;
@@ -35,7 +35,7 @@ header nav ul li a {
     text-decoration: none;
 }
 header nav ul li a:hover {
-    background: grey;
+    background: rgb(132, 109, 153);
 }
 
 .main .articles {
@@ -49,17 +49,16 @@ header nav ul li a:hover {
     margin-bottom: 20px;
 }
 aside {
-    width: 30%;
+    width: 24%;
     background: orange;
     float: left;
-    padding: 20px;
+    padding: 46.8px;
     box-sizing: border-box;
-
+}
 footer {
-    background; black;
-    color: black;
-/* limpian los float: left; y da como un salto de línea. */
-    clear: both;   
+    background: black;
+    color: white;
+    clear: both;          /* limpian los float: left; y da como un salto de línea. */
     padding: 10px 0px;
-
+    text-align: center;
 }

@@ -24,6 +24,7 @@ a {
     color: black;
     padding: 10px 20px;
     box-shadow: 7px 7px 7px gray;
+}
 
 a:hover {
     box-shadow: 7px 7px 7px gray;
@@ -34,7 +35,7 @@ a:active {
 }
 
     /*     padding: 10px 20px; */
-}
+
 /* 
 a:active {
     background: orange;
@@ -68,6 +69,7 @@ h1 {
     text-align: center;
     border-radius: 30px;
 }
+
 p {
     color: black;
     font-family: 'Times New Roman', Times, serif;
@@ -142,7 +144,7 @@ textarea {
     resize: vertical;
     max-height: 300px;
     min-height: 100px;
-
+}
 input, textarea {
     margin-bottom: 20px;
     width: 100%;

@@ -35,7 +35,7 @@ header nav ul li a {
     text-decoration: none;
 }
 header nav ul li a:hover {
-    background: rgb(132, 109, 153);
+    background: papayawhip;
 }
 
 .main .articles {

@@ -1,6 +1,7 @@
 /* Siempre se lee de derecha a izquierda */
 
 /* Selector de descendientes : operador es el espacio */ 
+
 section p {
     color: steelblue;
 }

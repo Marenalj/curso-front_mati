@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nombre = "Julio",
+            edad = 34;
+        // si nuestra condición tiene cierto valor, se ejecutará esta instrucción y, si no, queremos que se ejecuten esta otra.
+        // if(condición que queremos que se cumpla) {
+              // instrucciones
+        // } else {
+            // instrucciones
+       // }
+       if(nombre =="Julio" ) {
+           document.write("Bienvenido " + nombre);
+       } else {
+           document.write("Bienvenido anónimo");
+       }
+
+       // En este caso, como no se cumple la primera condición, se va a ejecutar la segunda.
+       if(nombre == "Luis") {
+           document.write("Bienvenido " + nombre);
+       } else { 
+           document.write(" Bienvenido anónimo ")
+       }
+
+       // En este caso vamos a pedir que los usuarios de esta página tengan 18 años. Y, si no se cumple, le diremos que no es mayor de edad. Y vamos agregar una excepción, que cierto usuario si tenga acceso a la página web y se lo decimos en el else statement. Tenemos un usuario que tiene 15 años y no cumple la primera condición, pero sí se llama Julio. Por lo tanto, como se cumple la condición de nombre=Julio, aparecerá el mensaje "Bienvenido Julioi"
+       var nombre = "Julio",
+           edad = 15
+       if (edad == 18) {
+           document.write("Bienvenido, tienes 18 años");
+       } else if (nombre = "Julio") {
+           document.write("Bienvenido " + nombre);
+       } else {
+           document.write("No eres mayor de edad")
+       }
+
+
+       // Ahora vamos a ponerle una condición nueva utilizando los operadores lógicos
+       // < menor que
+       // > mayor que
+       // >= mayor o igual
+       // <= menor o igual
+       // == igual que
+       // != distinto de
+       // &&  y
+       // ||   or
+
+       var nombre = "Julio",
+           edad = 18;
+       // Si en vez de poner el operador && (se tienen que cumplir las dos) ponermos || (or), se puede cumplir una o la otra
+       if (edad >= 18 && nombre == "Carlos") {
+        document.write("Bienvenido, eres mayor de edad");
+       } else {
+           document.write(" No estás autorizado a entrar en este área, largo de aquí");
+       }   
+
+       // En las condiciones te pueden encontrar una función  
+       // if (function)
+       // utilizaremos === cuando tienen el mismo valor y sean del mismo tipo
+       if (true) {
+       document.write(" Ok");
+       } else {
+       document.write("False");
+       }
+      
+    </script>
+</body>
+</html>

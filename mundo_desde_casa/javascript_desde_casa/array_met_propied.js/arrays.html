@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Personas 4, contador 3
+        var amigos = ["Aitor", "David", "Iván", "Juan"];
+        var amigos2 = ["Sonia", "Lorena", "Natalia", "Mari Ángeles", "Juliana", "Juli", "Chare"];
+
+        document.write(amigos.join(" - "));
+
+        // con amigos.sort los vamos a ordenar alfabéticamente
+        var ordenados = amigos.sort()
+
+        // con amigos.reverse() les damos la vuelta
+        var ordenados = amigos.reverse();
+        document.write(ordenados);
+
+    // Vamos a concatenar el Array amigos con el array amigos2 en un arreglo nuevo, que sería amigos3.
+        var amigos3 = amigos.concat(amigos2);
+        document.write(amigos3);
+
+        // A amigos le agregamos un punto y ya podemos acceder a la propiedad length. Así ya podemos saber cuántos elementos tiene el Array amigos. Concatenamos una cadena de texto con espacios para separar las palabras en el mensaje que nos aparecerá a través del signo +.
+        document.write("Tienes " + amigos.length + " amigos ");
+        // También podemos agregar dinámicamente un nuevo elemento. Así, podemos acceder al último elemento y agregar uno nuevo
+        amigos[amigos.length] = "Sonia";
+        amigos[amigos.length] = "Lorena";
+        amigos[amigos.length] = "Natalia";
+        //También se puede agregar elementos con push. Siempre se van agregando al final de los que ya tenemos.
+        amigos.push("Aitor", "David", "Iván", "Juan", "Sonia", "Lorena", "Natalia");
+        //Si queremos eliminar el último se haría de la siguiente manera:
+        amigos.pop()
+
+        document.write(amigos[0]);
+        document.write(amigos[1]);
+        document.write(amigos[2]);
+        document.write(amigos[3]);
+        document.write(amigos[4]);
+        document.write(amigos[5]);
+        document.write(amigos[6]);
+
+    </script>
+    
+</body>
+</html>

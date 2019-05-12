@@ -1,4 +1,4 @@
-/* Cuando yo le digo un     width     le estoy aplicando el ancho al contenido del elemento. La propiedad se llama border box. 
+/* Cuando yo le doy un     width     le estoy aplicando el ancho al contenido del elemento. La propiedad se llama border box. 
 el      *box-sizing: border-box       es la maravilla de las maravillas. Decide si la ref width es sólo a lo que está del borde hacie adentro. content-box      es el espacio que va de dentro hacia al borde*/
 
 * {

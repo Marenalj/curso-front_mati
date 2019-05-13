@@ -1,0 +1,19 @@
+section {
+    min-height: 80vh;
+    display: flex;
+    /* Alineación en el eje principal: por defecto flex-start */
+    justify-content: center;
+    /* Alineación en el eje secundario: por defecto stretch */
+    align-items: center;
+}
+
+ .item-flex {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 2rem;
+}  
+
+button {
+    color: rgb(19, 72, 119);
+    background-color: blue;
+}

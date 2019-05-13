@@ -1,5 +1,5 @@
 /**
- * Reacemos el ejercicio empleando una funcion constructora
+ * Rehacemos el ejercicio empleando una funcion constructora
  */
 
 class Empresa {
@@ -21,13 +21,14 @@ class Item  {
 
 class Factura {
     constructor  (cliente, tipoIVA, formaPago) {
+        // this.empresa = new Empresa('Ediciones Boracay', 'C/ Pez, '916583764', 'B-64539874')
         this.cliente = cliente
         this.items = []
         this.tipoIVA = tipoIVA
         this.formaPago = formaPago
     }
     get empresa() {
-        return new Empresa('Ediciones Boracay', 'c/ Pez','916583764', 'B-64539874')
+        return new Empresa('Ediciones Boracay', 'C/ Pez','916583764', 'B-64539874')
     }
     addItem (item = new Item()) {
         this.items.push(item)
@@ -51,7 +52,7 @@ class Factura {
     // const factura1 = new Factura(cliente1, 0.23, 'efectivo')
 
     const factura1 = new Factura(
-        new Empresa('Libros Tuatalug', 'c/ Marques de ', '917256983', 'M-64584741'), 
+        new Empresa('Libros Tuatalug', 'C/ Marques de ', '917256983', 'M-64584741'), 
         0.23, 
         'efectivo')
 

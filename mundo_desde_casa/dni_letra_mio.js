@@ -1,3 +1,15 @@
+
+/**
+ * Ejercicio 13 (if)
+ * 51370235
+ * El resto de la división del DNI entre 23, luego te vas al array y miras qué letra corresponde a tu dni.
+ * modulo (%)
+ */
+
+ /* console.log(51370235 % 23)
+ 51370235 */
+
+
 var letras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "X", "E", "T"];
 function checkDNI(dni) {
     if (dni.length !==9) {

@@ -5,28 +5,35 @@
  /** Seleccionar nodos del DOM */
  // Mis nodos del DOM van a ser quién (la entrada de datos y los botones)
 
-    export class Saludador {
-        constructor() {
-            this.aQuien = ''
-            this.msg = [`Hola`, `Adiós`]
+ export function main () {
+    let aQuien = ''
+    let msg = [`Hola`, `Adiós`]
 
-    this.inNombre = document.querySelector('#in-nombre')
-    this.btnSaludar = document.querySelector('#btn-saludar')
-    this.btnDespedirse = document.querySelector('#btn-despedirse')
+    let inNombre = document.querySelector('#in-nombre')
+    let btnSaludar = document.querySelector('#btn-saludar')
+    let btnDespedirse = document.querySelector('#btn-despedirse')
 
-/**Asignar manejadores a los nodos */
-    this.btnSaludar.addEventListener('click', this.saludar.bind(this))
-    this.btnDespedirse.addEventListener('click', this.despedirse.bind(this))
+
+    /**Asignar manejadores a los nodos */
+    // btnSaludar.addEventListener('click'), saludar)
+
+/*     btnSaludar.addEventListener('click', () => {
+        aQuien = inNombre.value
+        console.log(msg[0] + aQuien)
+    )}
+ */
+ 
+    btnSaludar.addEventListener('click', saludar)
+    btnDespedirse.addEventListener('click', despedirse)
+ 
+    
+function saludar() {
+    aQuien = inNombre.value
+    //console.dir(inNombre)
+    console.log(msg[0] + aQuien)
 }
-
-saludar() {
-    this.aQuien = this.inNombre.value
-    //console.dir(this.inNombre)
-    console.log(this.msg[0] + this.aQuien)
-}
-despedirse () {
-    this.aQuien = this.inNombre.value
-    //console.dir()
-    console.log(this.msg[1] + this.aQuien)
+function despedirse () {
+    aQuien = inNombre.value
+    console.log(msg[1] + aQuien)
     }
 }

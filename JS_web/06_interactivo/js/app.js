@@ -4,6 +4,6 @@
  * 
  * */ 
 
-importar { main } desde  ' ./saludador.js '
+import { main } from './saludador.js'
 
-documento . addEventListener ( ' DOMContentLoaded ' , main) 
+document.addEventListener('DOMContentLoaded', main ) 

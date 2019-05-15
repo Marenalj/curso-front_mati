@@ -5,33 +5,33 @@
  /** Seleccionar nodos del DOM */
  // Mis nodos del DOM van a ser quién (la entrada de datos y los botones)
 
- función de  exportación main () {
+ export function main () {
 
-    deja aQuien =  ' '
-    dejar msg = [ ` hola ' , ' Adios ' ]
+    let aQuien = ''
+    let msg = [`Hola `, `Adios `]
 
-    / ** Seleccionar nodos del DOM * /
-    dejar enNombre =  documento . querySelector ( ' # in-nombre ' )
-    dejar que btnSaludar =  documento . querySelector ( ' # btn-saludar ' )
-    dejar que btnDespedirse =  documento . querySelector ( ' # btn-despedirse ' )
-
-
-    / ** Asignar manejadores a los nodos * /
-    btnSaludar . addEventListener ( ' clic ' , saludar)
-    / * btnSaludar.addEventListener ('click', () => {
+    /** Seleccionar nodos del DOM */
+    let inNombre = document.querySelector('#in-nombre')
+    let btnSaludar = document.querySelector('#btn-saludar')
+    let btnDespedirse = document.querySelector('#btn-despedirse')
+    
+    
+    /**Asignar manejadores a los nodos */
+    btnSaludar.addEventListener('click', saludar)
+    /* btnSaludar.addEventListener('click', () => {
             aQuien = inNombre.value
-            console.log (msg [0] + aQuien)
-    }) * /
-    BtnDespedirse . addEventListener ( ' clic ' , despedirse)
+            console.log(msg[0] + aQuien)
+    }) */
+    btnDespedirse.addEventListener('click', despedirse)
 
-    función  saludar () {
-        aQuien =  inNombre . valor
-        consola . log (msg [ 0 ] + aQuien)
+    function saludar () {
+        aQuien = inNombre.value
+        console.log(msg[0] + aQuien)
     }
 
-    función de  despedirse () {
-        aQuien =  inNombre . valor
-        consola . log (msg [ 1 ] + aQuien)
+    function despedirse() {
+        aQuien = inNombre.value
+        console.log(msg[1] + aQuien)
     }
 
-} 
+}

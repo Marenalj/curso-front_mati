@@ -2,9 +2,9 @@ section {
     min-height: 80vh;
     display: flex;
     
-    /*Alineacion en el eje principal : por defecto flex-start*/
+    /*Alineación en el eje principal : por defecto flex-start*/
    justify-content: center;
-   /*Alineacion en el eje secundario : por defecto stretch*/
+   /*Alineación en el eje secundario : por defecto stretch*/
    align-items: center;
 }
 

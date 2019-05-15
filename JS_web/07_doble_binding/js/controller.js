@@ -25,6 +25,7 @@ export function controller () {
         output.innerHTML = msgInicial + nombre.toUpperCase()
     }
     function borrar () {
-
+        inNombre.value= ''
+        onInputNombre()
     }
 }

@@ -1,45 +1,40 @@
 /**
  * Las clases siempre hacen referencia a sustantivos porque son pasivas, como personas, objetos... y a los métodos se les dará nombres de verbos porque son activos. Saludadro va a saludar. Saludar es el método. aQuien = ''    va a ser un string y se deja espacio vacío.
  */
+ // Mis nodos del DOM van a ser Quién (la entrada de datos y los botones)
 
- /** Seleccionar nodos del DOM */
- // Mis nodos del DOM van a ser quién (la entrada de datos y los botones)
-
- export class saludador {
-    constructor() {
-    this.aQuien = ''
-    this.msg = [`Hola`, `Adiós`]
-
-    thid.inNombre = document.querySelector('#in-nombre')
-    this.btnSaludar = document.querySelector('#btn-saludar')
-    this.btnDespedirse = document.querySelector('#btn-despedirse')
-    this.btnBorrar = document.querySelector('#btn-borrar')
-    this.output = document.querySelector('#output')
-
+ export function main () {
+    let aQuien = ''
+    let msg = [`Hola`, `Adiós`]
+/** Seleccionar nodos del DOM */
+    let inNombre = document.querySelector('#in-nombre')
+    let btnSaludar = document.querySelector('#btn-saludar')
+    let btnDespedirse = document.querySelector('#btn-despedirse')
+    let btnBorrar = document.querySelector('#btn-borrar')
+    let output = document.querySelector('#output')
 
     /**Asignar manejadores a los nodos */
-    this.btnSaludar.addEventListener('click', this.saludar.bind(this))
-    this.btnDespedirse.addEventListener('click', this.despedirse.bind(this))
-    this.btnBorrar.addEventListener('click', this.btnBorrar.bind(this))
+    btnSaludar.addEventListener('click', saludar.bind)
+    btnDespedirse.addEventListener('click', despedirse)
+    btnBorrar.addEventListener('click', btnBorrar)
 } 
     
-saludar() {
-    if (this.inNombre.value) {
-        this.aQuien = '<b>' + this.inNombre.value + '</b>'
+function saludar() {
+    if (inNombre.value) {
+        aQuien = '<b>' + inNombre.value + '</b>'
     //console.dir(this.msg[0] + this.aQuien)
-    this.output.innerHTML = this.msg[0] + this.aQuien
+    output.innerHTML = msg[0] + aQuien
     }
 }
-despedirse () {
-    if (this.inNombre.value) {
-        this.aQuien = '<b>' + this.inNombre.value + '</b>'
+function despedirse () {
+    if (inNombre.value) {
+        Quien = '<b>' + inNombre.value + '</b>'
         //console.dir(this.output.innerHTML = this.mmsg[0] + this.aQuien)
-        this.output.innerHTML = this.MSG[1] + this.aQuien
+        output.innerHTML = msg[1] + aQuien
     }
 }
-
-borrar () {
-    this.output.innerHTML = ''
-    this.inNombre.value = ''
+function borrar () {
+    if (output.innerHTML = '')
+    inNombre.value = ''
     }
- }
+ 

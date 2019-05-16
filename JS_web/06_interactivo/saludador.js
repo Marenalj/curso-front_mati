@@ -6,6 +6,7 @@
 /**
  * Seleccionar nodos del DOM
  */
+
  // Mis nodos del DOM van a ser quiénes (la entrada de datos y los botones)
 
 

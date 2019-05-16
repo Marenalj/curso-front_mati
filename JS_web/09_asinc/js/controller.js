@@ -36,13 +36,17 @@ function saludar() {
 }
 function leerDatos() {
     let i
-    //lectura síncrona
-    //i = 33
+    //lectura síncrona: se supone que accedemos a un servidor y eso no existe
+    setTimeout(()=> {
+        i = '33dsdsdsdsd'
+        //mostrarDatos()
+    }, 1000);
+    
     //lectura asíncrona
-    setTimeout(() => {
+    /* setTimeout(() => {
         i = 33
         mostrarDatos()
-    }, 1000);
+    }, 1000); */
 
     
     //mostrarDatos()  // el resultado sería undefined

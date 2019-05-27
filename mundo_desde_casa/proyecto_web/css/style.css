@@ -41,12 +41,11 @@ header nav ul li {
 
 header nav ul li a {
     padding: 10px 20px;
-    display: block;
-    color: white;
+    color:;
     text-decoration: none;
 }
 header nav ul li a:hover {
-    background: papayawhip;
+    background: ;
 }
 section .main nav ul li {
     text-align: center;

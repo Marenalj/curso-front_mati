@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    
+}
+p {
+    text-align: center;
+}
+body {
+    background: white;
+}
+main nav ul {
+    text-align: center;
+}
+
+header, .main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+header nav {
+    background: yellow;
+    overflow: hidden;    /* nos limpia nuestros floats */
+}
+header nav ul {
+    list-style: none;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+header nav ul li {
+    float: right;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+header nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    background: papayawhip;
+}
+section .main nav ul li {
+    text-align: center;
+
+}
+

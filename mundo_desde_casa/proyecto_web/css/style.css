@@ -9,13 +9,9 @@ h1 {
 p {
     text-align: center;
 }
-body {
-    background: white;
-}
-main nav ul {
+h2 {
     text-align: center;
 }
-
 header, .main {
     width: 90%;
     max-width: 1000px;
@@ -23,7 +19,7 @@ header, .main {
 }
 header nav {
     background: yellow;
-    overflow: hidden;    /* nos limpia nuestros floats */
+    overflow: hidden;
 }
 header nav ul {
     list-style: none;
@@ -41,14 +37,14 @@ header nav ul li {
 
 header nav ul li a {
     padding: 10px 20px;
-    color:;
+    display: inline-block;
+    color: black;
     text-decoration: none;
 }
-header nav ul li a:hover {
-    background: ;
-}
+
 section .main nav ul li {
     text-align: center;
+    display: inline-block;
 
 }
 

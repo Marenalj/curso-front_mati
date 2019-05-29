@@ -12,22 +12,40 @@ p {
 h2 {
     text-align: center;
 }
+.wrapper {
+    width: 100%;
+    float: right;
+    overflow: hidden;
+}
+
 header, .main {
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
 }
-header nav {
+header div {
     background: yellow;
     overflow: hidden;
+    float: left;
 }
-header nav ul {
+.header2 {
+    position: fixed;
+    height: 100px;
+}
+.header2 .logo {
+    line-height: 100px;
+
+}
+header nav {
+    float: right;
+    
+}
+header div .menu {
     list-style: none;
-    margin-left: 2em;
-    margin-right: 2em;
+    text-align: center;
 }
 
-header nav ul li {
+.main .menu {
     float: right;
     border: 1px solid;
     border-radius: 5px;
@@ -35,7 +53,7 @@ header nav ul li {
     margin-right: 0.5em;
 }
 
-header nav ul li a {
+header div ul li a:hover {
     padding: 10px 20px;
     display: inline-block;
     color: black;
@@ -47,4 +65,3 @@ section .main nav ul li {
     display: inline-block;
 
 }
-

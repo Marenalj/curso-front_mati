@@ -33,10 +33,11 @@ header div {
     height: 100px;
 }
 .header2 .logo {
-    line-height: 100px;
-
+    line-height: 50px;
+    font-size: 30px;
 }
-header nav {
+.header2 nav {
+    line-height: 50px;
     float: right;
     
 }

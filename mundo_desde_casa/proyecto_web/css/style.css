@@ -24,7 +24,6 @@ header, .main {
     margin: 20px auto;
 }
 header div {
-    background: yellow;
     overflow: hidden;
     float: left;
 }

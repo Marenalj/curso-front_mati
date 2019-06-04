@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header, footer {
+    background-color: aqua;
+    color: black;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 90%;
+    margin: 1rem auto;
+    min-height: 70vh;
+}
+
+.control-group label, input {
+    display: block;
+    width: 100%;
+}
+
+.control-group input {
+    border: 0px;
+    border-bottom: 1px solid cornflowerblue;
+}
+.flex {
+    display: flex;
+}
+
+output {
+
+}
+
+.lista {
+    color: blueviolet;
+    background-color: bisque;
+    width: 50%;
+}
+
+.lista ol, .lista ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tabla tr:nth-of-type(2n) {
+    background-color: darkgreen;
+}

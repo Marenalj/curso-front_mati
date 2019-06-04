@@ -18,7 +18,6 @@ header, footer {
 section {
     width: 90%;
     margin: 1rem auto;
-    min-height: 70vh;
 }
 
 .control-group label, input {
@@ -34,14 +33,23 @@ section {
     display: flex;
 }
 
-output {
-
+.output {
+    min-height: 60vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .lista {
     color: blueviolet;
     background-color: bisque;
     width: 50%;
+}
+
+.tabla {
+    color: brown;
+    background-color: bisque; 
+    width: 50%;
+    padding: 1rem 0.2rem;
 }
 
 .lista ol, .lista ul {
@@ -52,4 +60,9 @@ output {
 
 .tabla tr:nth-of-type(2n) {
     background-color: darkgreen;
+}
+
+.borrar {
+    font-size: 0.8rem;
+    cursor: pointer;
 }

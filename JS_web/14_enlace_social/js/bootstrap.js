@@ -1,19 +1,9 @@
-export function controller () {
-    
-    // Procedimiento habitual
+import {controller} from './controller.js'
+ 
+/*
+Es buena practica crear un módulo aparte e importar la función principal
+*/
 
-    // 1. Referencia a los Nodos del DOM que se interesan
+// Proceso ASINCRONO
+document.addEventListener('DOMContentLoaded', controller)
 
-    const aNodosEnlaces = document.querySelectorAll('a')
-    console.log(aNodosEnlaces)
-
-    // 2. Definir los manejadores de eventos
-
-    aNodosEnlaces.forEach( item => item.addEventListener('clic', onClick))
-
-    // Implementar los manejadores de eventos
-
-    function onClick () {
-        
-    }
-}

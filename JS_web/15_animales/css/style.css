@@ -7,28 +7,31 @@ body {
 }
 
 header, footer {
-    background-color: aqua;
-    color: black;
+    background-color: brown;
+    color: bisque;
     min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section {
+section.animales {
     width: 90%;
     margin: 1rem auto;
+    position: relative;
 }
 
-.control-group label, input {
+
+.control-group  label, input {
     display: block;
     width: 100%;
 }
 
-.control-group input {
+.control-group  input {
     border: 0px;
-    border-bottom: 1px solid cornflowerblue;
+    border-bottom: 1px solid gray
 }
+
 .flex {
     display: flex;
 }
@@ -40,26 +43,28 @@ section {
 }
 
 .lista {
-    color: blueviolet;
-    background-color: bisque;
-    width: 50%;
-}
-
-.tabla {
     color: brown;
-    background-color: bisque; 
+    background-color: darkcyan;
     width: 50%;
     padding: 1rem 0.2rem;
 }
 
+.tabla {
+    color: brown;
+    background-color: darkcyan; 
+    width: 50%;
+    padding: 1rem 0.2rem;
+}
+
+
 .lista ol, .lista ul {
-    list-style: none;
+    list-style: lower-greek;
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
 }
 
 .tabla tr:nth-of-type(2n) {
-    background-color: darkgreen;
+    background-color: darkkhaki;
 }
 
 .borrar {
@@ -69,7 +74,7 @@ section {
 
 dialog {
     border: none;
-    background-color: bisque;
-    color: black;
+    background-color: brown;
+    color: bisque;
     text-align: center;
 }

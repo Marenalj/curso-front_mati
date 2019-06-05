@@ -2,7 +2,7 @@ export function controller() {
     console.log('Controller cargado')
 
     let formData = {}
-  
+    
     let form_curso = document.querySelector('#form_curso')
 
     form_curso.addEventListener('submit', onSubmit)
@@ -11,96 +11,96 @@ export function controller() {
         console.log('Formulario enviado')
         ev.preventDefault()
 
-        let aControles = document.querySelectorAll(`[type="text"],
-                                                    [type="email"],
-                                                    [type="password"],
-                                                    textarea`)
+        let aControles = document.querySelectorAll(`[type="text"], 
+                                                        [type="email"], 
+                                                        [type="password"], 
+                                                        textarea`)
 
-        aControles.forEach(
-            item => {formData[item.id] = item.value }
-        ) 
+        aControles.forEach(item => formData[item.id] = item.value)                                        
         
-        let aChecks = document.querySelectorAll('[type="checkbox"]')
-
-        aSelects.forEach(
-            item => setSelect(item, formData)
-        )
+        let aChecks = document.querySelectorAll('[ type="checkbox"]')
 
         aChecks.forEach(item => formData[item.id] = item.checked)
 
         let aRadioSede = document.querySelectorAll('[name="sede"]')
-       getRadio(aRadioSede, formData)
+        setRadio(aRadioSede, formData)
 
-       let aRadioTurno = document.querySelectorAll('[name="turno"]')
-       getRadio(aRadioTurno, formData)
+        let aRadioTurno = document.querySelectorAll('[name="turno"]')
+        setRadio(aRadioTurno, formData)
 
-       let aSelects = document.querySelectorAll('select')
-       item => setSelect(item, formData)
+        let aSelects = document.querySelectorAll('select')
 
-
-        console.log('checkbox')
-
-        setConfirmar
-
-        console.log(formData)
-        /* setTimeout (() => {
-            form_curso.submit()
-        }, 3000) */
+        aSelects.forEach(
+            item => setSelect(item, formData )
+        )
+        
+        setConfirmar(formData)
     }
 }
 
-function getRadio(radio, data) {
+
+function setRadio(radio, data) {
     radio.forEach(
         item => {
             if (item.checked) {
-                //data[item.name] = item.value
+                // data[item.name] = item.value
                 data[item.name] = {id: item.id, value: item.value}
                 return
-           }
+            }
         }
     )
 }
-// nodo select y un sitio para guardar los datos    data
+
 function setSelect(select, data) {
-    console.dir(select[select.selectedIndex])
+    console.dir(select)
     data[select.name] = {
-        clave: select[select.selectedIndex].value,
+        clave: select[select.selectedIndex].value, 
         nombre: select[select.selectedIndex].text
     }
     /* {
-        clave: select.selectedOptions[0].value,
-        nombre: select.selectedOptions[0].value
-    }
-}*/
+        clave: select.selectedOptions[0].value, 
+        nombre: select.selectedOptions[0].text
+    } */
+}
 
 function setConfirmar(data) {
     let dialog = document.querySelector('#confirmar')
     // dialog.open = true
-
+    
     let datosOutput = document.querySelector('#datosOutput')
-    datosOutput.innerHTML = data
-
-  function mostrarObjeto(obj)   {
-    let cadena ='<ul>'
-    for (const key in object) {
-        const element = data[key];
-        if (typeof element != 'object') {
-            cadena +=`<li>${key}: ${element}</li>`
-        } else {
-            cadena += '<li>' + key
-            cadena += mostrarObjeto(element)
-            cadena += '</li>'
-        }
-    }
-        cadena = '</ul>'
-        datosOutput.innerHTML = cadena
-    }
-}
-
+   
+    datosOutput.innerHTML = mostrarObjeto(data)
+    
     dialog.showModal()
 
     document.querySelector('#btnConfirmar')
-    .addEventListener('click', ()=> {
-        dialog.closest()
-    })
+        .addEventListener('click', ()=>{
+            dialog.close()
+            form_curso.submit()
+        })
+    
+    document.querySelector('#btnNoConfirmar')
+        .addEventListener('click', ()=>{
+            dialog.close()
+        })
+   
+
+}
+
+function mostrarObjeto(obj) {
+    let cadena = '<ul>'
+    for (const key in obj) {
+        const element = obj[key]
+        if (typeof element != 'object') {
+            cadena +=`<li>${key}: ${element}</li>`
+        }
+        else {  
+            cadena += '<li>'+ key
+            cadena +=  mostrarObjeto(element) 
+            cadena += '</li>'
+        }
+    }
+    cadena += '</ul>'
+    console.log(cadena)
+    return cadena
 }

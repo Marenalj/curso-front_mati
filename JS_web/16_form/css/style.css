@@ -1,0 +1,31 @@
+body {font-family: 'Noto Sans HK', sans-serif;}
+.curso {margin: 2rem;}
+
+fieldset {
+    border-color: orangered;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.control-group, .check-group, radio-group, button-group {
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+}
+
+.control-group label, .control-group input, .control-group textarea, .control-group select { 
+    display: block;
+    width: 100%;
+ }
+
+ .control-group input,  .control-group textare, .control-group select {
+     border: none; 
+     margin-top: 0.6rem;
+     border-bottom: 1px solid orangered;
+  }
+
+.button-group button {
+    background-color: orangered;
+    color: white;
+    padding: 0.6rem 1rem;;
+    text-transform: uppercase;
+}

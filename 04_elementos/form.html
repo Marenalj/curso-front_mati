@@ -55,36 +55,7 @@
                     <li>botones</li>
                 </ul>
                 <h3>Ejemplo de formulario</h3>
-                <form action="https://jsonplaceholder.typicode.com/users" method="POST"> <!-- al no poner nada en el atributo action, el formulario nos los enviamos a nosotros mismos -->
-                <!--<ul>
-                        <li></li>
-                    </ul> -->
-                    <fieldset>
-                        <legend>Datos personales</legend>
-                        <div>
-                            <label for="nombre">Nombre</label> <!-- el atributo for tiene que coincidir con el id del input al que hace referencia -->
-                            <input type="text" name="name" id="nombre" placeholder="¿Cuál es tu nombre?" required minlength="3"> <!-- esto funciona por pares clave-valor o nombre del elemento del input-input. Nunca se puede dejar vacío el atributo name porque si no, no nos va a salir la información. Es el único campo (name) que se decide conjuntamente entre el FrontEnd y el BackEnd --> 
-                        </div>
-                        <div>
-                            <label for="email">Correo</label>
-                            <input type="email" name="email" id="email" placeholder="Introduzca su email" required>  
-                        </div>
-                        <div>
-                            <label for="passwd">Contraseña</label>
-                            <input type="password" name="passwd" id="passwd" required maxlength="4">
-                        </div>
-                        <div>
-                            <label for="">Comentarios</label>
-                            <textarea name="comments" id="comments" cols="30" rows="5"></textarea> <!-- el concepto de cols y rows no se puede meter por CSS -->
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Condiciones</legend>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias ipsum obcaecati, qui a odit voluptatibus optio veniam libero minima, fugiat reprehenderit id? Soluta exercitationem vitae sint assumenda eveniet vel.</p>
-                        <div>
-                            <input type="checkbox" name="aceptado" id="aceptado" required> <!-- si no lo checamos no manda el dato -->
-                            <label for="aceptado">Estoy de acuerdo con las condiciones de uso y privacidad</label> <!-- por accesibilidad los label siempre tienen que tener el for bien puesto -->
-                        </div>
+                 </div>
                         <fieldset>
                             <legend>Datos del curso</legend>
                             <div>
@@ -118,7 +89,36 @@
                         <button type="reset">Reset</button>
                     </div>
                     <!-- Es preferible organizar los inputs mediante div antes que por párrafos o por listas -->
-                </form>
+                </form><form action="https://jsonplaceholder.typicode.com/users" method="POST"> <!-- al no poner nada en el atributo action, el formulario nos los enviamos a nosotros mismos -->
+                <!--<ul>
+                        <li></li>
+                    </ul> -->
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div>
+                            <label for="nombre">Nombre</label> <!-- el atributo for tiene que coincidir con el id del input al que hace referencia -->
+                            <input type="text" name="name" id="nombre" placeholder="¿Cuál es tu nombre?" required minlength="3"> <!-- esto funciona por pares clave-valor o nombre del elemento del input-input. Nunca se puede dejar vacío el atributo name porque si no, no nos va a salir la información. Es el único campo (name) que se decide conjuntamente entre el FrontEnd y el BackEnd --> 
+                        </div>
+                        <div>
+                            <label for="email">Correo</label>
+                            <input type="email" name="email" id="email" placeholder="Introduzca su email" required>  
+                        </div>
+                        <div>
+                            <label for="passwd">Contraseña</label>
+                            <input type="password" name="passwd" id="passwd" required maxlength="4">
+                        </div>
+                        <div>
+                            <label for="">Comentarios</label>
+                            <textarea name="comments" id="comments" cols="30" rows="5"></textarea> <!-- el concepto de cols y rows no se puede meter por CSS -->
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Condiciones</legend>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime molestias ipsum obcaecati, qui a odit voluptatibus optio veniam libero minima, fugiat reprehenderit id? Soluta exercitationem vitae sint assumenda eveniet vel.</p>
+                        <div>
+                            <input type="checkbox" name="aceptado" id="aceptado" required> <!-- si no lo checamos no manda el dato -->
+                            <label for="aceptado">Estoy de acuerdo con las condiciones de uso y privacidad</label> <!-- por accesibilidad los label siempre tienen que tener el for bien puesto -->
+                       
                 <!-- <form action=""></form> = <form action="" method="get"></form> -->
             </section>
 

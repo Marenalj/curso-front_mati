@@ -66,3 +66,10 @@ section {
     font-size: 0.8rem;
     cursor: pointer;
 }
+
+dialog {
+    border: none;
+    background-color: bisque;
+    color: black;
+    text-align: center;
+}

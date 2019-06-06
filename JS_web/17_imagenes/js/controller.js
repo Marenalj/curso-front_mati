@@ -18,7 +18,7 @@ export function controller() {
         console.log(nodoImg.id)
 
         if (nodoImg.id == 'img1') {
-            if (img1_stich {
+            if (img1_stich) {
                 nodoImg.src = "./assets/stich_depie.png"
             } else {
                 nodoImg.src = "./assets/dragon_komodo.jpg"

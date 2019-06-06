@@ -96,8 +96,10 @@ export class Controller {
 
     crearLista() {
         let lista = '<ul>'
-        this.aAnimales.forEach( (item,i) => lista += `<li>${item} <i data-index="${i}" class="borrar far fa-trash-alt"></i></li>`)
+        this.aAnimales.forEach( (item,i) => lista += `<li>${item}
+        <i data-index="${i}" class="borrar far fa-trash-alt"></i></li>`)
         lista += '</ul>'
+        lista += 
         this.lista.innerHTML = lista
     }
 
@@ -108,7 +110,7 @@ export class Controller {
         this.tabla.innerHTML = tabla
     }
 
-    ajustarBorradores() {
+    ajustarItems() {
         this.aEraser = document.querySelectorAll('.borrar')
         this.aEraser.forEach( 
             item => item.addEventListener(

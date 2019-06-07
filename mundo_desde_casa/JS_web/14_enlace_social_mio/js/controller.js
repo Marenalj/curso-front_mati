@@ -22,14 +22,16 @@ export function controller () {
         document.getElementById(elementID).innerHTML = '¡Uy, no tengo esta red social!';
     }
     let elementsArray = [];
-    function Elements(element1, element2, element3, element4) {
+    function Elements(element1, element2, element3, element4, element5, element6) {
         elementsArray.push(element1);
         elementsArray.push(element2);
         elementsArray.push(element3);
         elementsArray.push(element4);
+        elementsArray.push(element5);
+        elementsArray.push(element6);
     }
     
-    Elements("Twitter", "Facebook", "Linkedin", "Instagram");
+    Elements("Facebook", "Linkedin", "Twitter", "Instagram", "Github", "Instagram");
 
     let str = '<ul>'
 

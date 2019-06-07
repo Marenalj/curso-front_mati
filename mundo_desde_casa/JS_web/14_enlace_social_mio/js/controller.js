@@ -34,9 +34,9 @@ export function controller () {
     let str = '<ul>'
 
     elementsArray.forEach(function(element) {
-        str += '<li id="' + element + '" onClick="changeText(' + element + ')"">'+ element + '</li>';
+        str += '<li id="' + element + '" onClick="changeText(' + element + ')"">' + element + '</li>';
     });
 
     str += '</ul>';
     document.getElementById("elementContainer").innerHTML = str;
-    console.log(document.getElementById("elementContainer"),innerHTML);
+    console.log(document.getElementById("elementContainer"),innerHTML)

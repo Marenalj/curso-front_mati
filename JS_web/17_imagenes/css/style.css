@@ -11,9 +11,9 @@ img {
 }
 
 .button {
-    background-color: rgb(31, 165, 109);
-    border: 2px darkkhaki;
+    background-color: green;
+    border: 2px rgb(180, 194, 180);
     padding: .6rem;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px 2px gainsboro;
+    box-shadow: 2px 2px 5px 2px darkgray;
 }

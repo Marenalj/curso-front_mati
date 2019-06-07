@@ -16,14 +16,14 @@ export function controller() {
             } else {
                 nodoImg.src = "./assets/peluche-stitch-lilo-stich-disney-stitch-32-cm-D_NQ_NP_682403-MCO25758255829_072017-F.jpg"
             }
-            img1_dragon = !img1_stich 
+            img1_stich = !img1_stich 
         } else if (nodoImg.id == 'img2') {
-            if (img2_dragon) {
-                nodoImg.src = "./assets/peluche-stitch-lilo-stich-disney-stitch-32-cm-D_NQ_NP_682403-MCO25758255829_072017-F.jpg"
-            } else {
+            if (img2_stich_depie) {
                 nodoImg.src = "./assets/stich_depie.jpg"
+            } else {
+                nodoImg.src = "./assets/peluche-stitch-lilo-stich-disney-stitch-32-cm-D_NQ_NP_682403-MCO25758255829_072017-F.jpg"
             }
-            img2_stich = !img2_stich_sentado
+            img2_stich = !img2_stich_depie
         } 
     }
 }

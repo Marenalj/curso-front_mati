@@ -44,7 +44,7 @@ function setRadio(radio, data) {
         item => {
             if (item.checked) {
                 // data[item.name] = item.value
-                data[item.name] = {id: item.id, value: item.value}
+                data[item.name] = {id: item.id, value: item.id}
                 return
             }
         }
@@ -54,8 +54,8 @@ function setRadio(radio, data) {
 function setSelect(select, data) {
     console.dir(select)
     data[select.name] = {
-        clave: select[select.selectedIndex].value, 
-        nombre: select[select.selectedIndex].text
+        id: select[select.selectedIndex].value, 
+        value: select[select.selectedIndex].text
     }
     /* {
         clave: select.selectedOptions[0].value, 

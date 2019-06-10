@@ -1,72 +1,58 @@
+import { isLetraDNIValida } from "./dni.js";
+
 export function controller() {
     console.log('Controller cargado')
 
     let formData = {}
-    // la validación empieza cuamdo has hecho un evento submit onSubmit. con el preventDefault me cargo el evento submit cuando ya ha cumplido su función
     let form_curso = document.querySelector('#form_curso')
+    let aControles = document.querySelectorAll(`[type="text"], 
+                                                [type="email"], 
+                                                [type="password"], 
+                                                [type="date"],
+                                                textarea`)
+    let aChecks = document.querySelectorAll('[ type="checkbox"]')
+    let aRadioSede = document.querySelectorAll('[name="sede"]')
+    let aRadioTurno = document.querySelectorAll('[name="turno"]')     
+    let aSelects = document.querySelectorAll('select')   
+    let dni =  document.querySelector('#dni')
 
     form_curso.addEventListener('submit', onSubmit)
 
-    let dni = document.querySelector('#dni')
+    aControles.forEach( item => {
+        if (item.willValidate) {
+            item.addEventListener('input', suspendValidation)
+            item.addEventListener('blur', () => {
+                validate(aControles[0])
+            })
+        }
+    })
+
+    dni.setCustomValidity('Letra del DNI incorrecta')
     dni.addEventListener('change', () => {
         console.dir(dni)
         if (isLetraDNIValida(dni.value)) {
             dni.setCustomValidity('')
-        }
+        }        
     } )
-
-    document.querySelector('#dni').setCustomValidity('Letra del DNI incorrecta')
 
     function onSubmit(ev) {
         console.log('Formulario enviado')
         ev.preventDefault()
 
-
-        let aControles = document.querySelectorAll(`[type="text"], 
-                                                        [type="email"], 
-                                                        [type="password"], 
-                                                        [type="date"],
-                                                        textarea`)
-        let aChecks = document.querySelectorAll('[ type="checkbox"]')
-        let aRadioSede = document.querySelectorAll('[name="sede"]')
-        let aRadioTurno = document.querySelectorAll('[name="turno"]')
-        let aSelects = document.querySelectorAll('select')
-        let dni = document.querySelector('#dni')
-
-        aControles.forEach( item => {
-            if (item.willValidate) {
-                item.addEventListener('input', suspendValidation)
-                item.addEventListener('blur', () => {
-                validate(aControles[0])
-        }
-
-            }
-                )
-        }
-
-        
-
-        // Validación      
-        for (let i = 0; i< aControles.length; i++) {
+        // Validacion    
+        for (let i = 0; i < aControles.length; i++) {
             const item = aControles[i];
             console.log('VALIDANDO', item.name)
             console.dir(item)
-            if(item.willValidate && !validate(item) {
+            if(item.validationMessage && !validate(item)) {
                 return
             }
-        } 
-        // return de la función submit. Este bucle está validando el text, email, password, date y textarea. Cuando el primer if se cumple, se ejecuta la función siguiente.
-        // Si no se cumple la primera condición, entonces se ejecuta la función.
-        
-
-        aComtroles.forEach(item => validate(item))                                              
+        }
+                                                
         aControles.forEach(item => formData[item.id] = item.value)                                                
         aChecks.forEach(item => formData[item.id] = item.checked)
-        
         setRadio(aRadioSede, formData)
         setRadio(aRadioTurno, formData)
-
-
         aSelects.forEach(
             item => setSelect(item, formData )
         )
@@ -76,37 +62,38 @@ export function controller() {
 }
 
 
+
 function validate(nodo) {
     let msg = ''
     if (nodo.validity.valueMissing) {
-        msg = 'Completa este campo' 
-        } else if (nodo.validity.tooShort) {
-            msg = 'Aumenta la longitud de este campo'
-        } else if (nodo.validity.patternMismatch) {
-            msg = 'Adapta el campo al formato requerido'
-        } else if (nodo.validity.customError) {
-            msg = nodo.validationMessage
-        }
+        msg = 'Completa este campo'
+    } else if (nodo.validity.tooShort) {
+        msg = 'Auumenta la longitud de este campo'
+    } else if (nodo.validity.patternMismatch) {
+        msg = 'Adapta el campo al formato requerido'
+    } else if (nodo.validity.customError) {
+        msg = nodo.validationMessage
+    }
 
-        if (msg) {
-            nodo.focur()
-            nodo.classList.add(".invalid")
-            nodo.nextElementSibling.innerHTML = 'Completa este campo'
-            nodo.nextElementSibling.hidden = false
-            console.dir(nodo)
-            return false
-        } else {
-            nodo.classList.remove(".invalid")
-            nodo.nextElementSibling.hidden = true
-            return true
-        }
-    
+    if (msg) {
+        nodo.focus()
+        nodo.classList.add(".invalid")
+        nodo.nextElementSibling.innerHTML = msg
+        nodo.nextElementSibling.hidden = false
+        console.dir(nodo)
+        return false
+    } else {
+        nodo.classList.remove(".invalid")
+        nodo.nextElementSibling.hidden = true
+        return true
+    }
+}
 
-// que no lo valide cuando estás escribiendo
-function suspendValidation(ev) {
+
+
+function suspendValidation (ev) {
     ev.target.classList.remove(".invalid")
     ev.target.nextElementSibling.hidden = true
-
 }
 
 
@@ -115,7 +102,7 @@ function setRadio(radio, data) {
         item => {
             if (item.checked) {
                 // data[item.name] = item.value
-                data[item.name] = {id: item.id, value: item.id}
+                data[item.name] = {id: item.value, value: item.id}
                 return
             }
         }

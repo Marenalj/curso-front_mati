@@ -8,7 +8,7 @@ body {
 }
 
 header, footer {
-    background-color: chocolate;
+    background-color: brown;
     color: bisque;
     min-height: 10vh;
     display: flex;
@@ -22,7 +22,7 @@ header, footer {
 }
 
 fieldset {
-    border-color: black;
+    border-color: salmon;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
 }
@@ -61,18 +61,25 @@ fieldset {
 }
 
 .error {
-    color: burlywood;
+    color: brown;
+    margin: 0 0 0 4rem;
+    background-color: darkgray;
+    border: 2px dimgray groove;
+    padding: .6rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px darkgray;
+    width: fit-content;
 }
 
 input:required {
-    background-color: blanchedalmond;
-
+   background-color: bisque; 
 }
 
 /* input:invalid {
     border: 1px brown solid;
-} */
+}  */
+
 
 .invalid {
     border: 1px brown solid;
-}
+} 

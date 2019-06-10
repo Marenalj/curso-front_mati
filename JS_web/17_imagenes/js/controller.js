@@ -1,41 +1,29 @@
 export function controller() {
     console.log('Controller cargado')
-//variable dragon propiedad true
-   // let dragon = true
+
+//variable stich propiedad true
+   // let stich = true
 
    // .img_dinamic
    // .button
 
-   let img1_dragon = true
-   let img2_dragon = false
-
-   aBotones = document.querySelectorAll('.button')
-   aBotones.forEach(item => {
-       item.addEventListener('click', onClickImg)
-   });
-
 
     function onClickImg(ev) {
-        let nodoImg = ev.target.previousElementsSibling.firstElementChild
-// ev.target es el botón en el que yo he hecho click pero si pongo previousElementSibling y accedo a firstElementChild, llego a la imagen
-        console.log(nodoImg.id)
-
+        let nodoImg = ev.target.previousElementSibling.firstElementChild
         if (nodoImg.id == 'img1') {
-            if (img1_dragon) {
-                nodoImg.src = "./assets/iguana.png"
+            if (img1_stich) {
+                nodoImg.src = "./assets/stich_depie.jpg"
             } else {
-                nodoImg.src="./assets/dragon_komodo.jpg"
+                nodoImg.src = "./assets/peluche-stitch-lilo-stich-disney-stitch-32-cm-D_NQ_NP_682403-MCO25758255829_072017-F.jpg"
             }
-            img1_dragon = !img1_dragon
+            img1_stich = !img1_stich 
         } else if (nodoImg.id == 'img2') {
-            if (img2_dragon) {
-                nodoImg.src = "./assets/iguana.png"
+            if (img2_stich_depie) {
+                nodoImg.src = "./assets/stich_depie.jpg"
             } else {
-                nodoImg.src="./assets/dragon_komodo.jpg"
+                nodoImg.src = "./assets/peluche-stitch-lilo-stich-disney-stitch-32-cm-D_NQ_NP_682403-MCO25758255829_072017-F.jpg"
             }
-            img2_dragon = !img2_dragon
-        }
-        }
-
-/*       */
+            img2_stich = !img2_stich_depie
+        } 
+    }
 }

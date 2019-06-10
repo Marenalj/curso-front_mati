@@ -1,3 +1,5 @@
+import { isLetraDNIValida } from "./dni.js";
+
 export function controller() {
     console.log('Controller cargado')
 
@@ -8,6 +10,7 @@ export function controller() {
     form_curso.addEventListener('submit', onSubmit)
 
     let dni = document.querySelector('#dni')
+    dni.setCustomValidity('Letra del DNI incorrecta')
     dni.addEventListener('change', () => {
         console.dir(dni)
         if (isLetraDNIValida(dni.value)) {
@@ -15,25 +18,10 @@ export function controller() {
         }
     } )
 
-    document.querySelector('#dni').setCustomValidity('Letra del DNI incorrecta')
 
     function onSubmit(ev) {
         console.log('Formulario enviado')
         ev.preventDefault()
-
-        // Validación
-        if (document.querySelector('#nombre').validity.valueMissing) {
-            document.querySelector('#nombre').nextElementSibling.innerHTML = 'Completa este campo'
-            return
-
-            //document.querySelector('#nombre').nextElementSibling.innerHTML = validationMessage
-            //document.querySelector('#nombre').validationMessage
-            //return 
-
-        }
-        
-        console.log(document.querySelector('#nombre'))
-        
 
         let aControles = document.querySelectorAll(`[type="text"], 
                                                         [type="email"], 
@@ -41,15 +29,12 @@ export function controller() {
                                                         [type="date"],
                                                         textarea`)
 
-        for (let i = 0; i< aControles.length; i++) {
+        for (let i = 0; i < aControles.length; i++) {
             const item = aControles[i];
             if(!validate(item)) {
-                // return de la función submit. Este bucle está validando el text, email, password, date y textarea.
                 return
             }
         }
-
-        aComtroles.forEach(item => validate(item))                                              
 
         aControles.forEach(item => formData[item.id] = item.value)                                        
         
@@ -73,24 +58,13 @@ export function controller() {
     }
 }
 
-function validate(nodo) {
-
-    if (nodo.validity.valueMissing) {
-        nodo.nextElementSibling.innerHTML = 'Completa este campo'
-        nodo.autofocus = true;
-        console.dir(nodo)
-        return false
-    }
-
-}
-
 
 function setRadio(radio, data) {
     radio.forEach(
         item => {
             if (item.checked) {
                 // data[item.name] = item.value
-                data[item.name] = {id: item.id, value: item.id}
+                data[item.name] = {id: item.value, value: item.id}
                 return
             }
         }
@@ -128,8 +102,7 @@ function setConfirmar(data) {
     document.querySelector('#btnNoConfirmar')
         .addEventListener('click', ()=>{
             dialog.close()
-        })
-   
+        })  
 
 }
 
@@ -150,3 +123,4 @@ function mostrarObjeto(obj) {
     console.log(cadena)
     return cadena
 }
+  

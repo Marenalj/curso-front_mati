@@ -2,7 +2,7 @@ export function controller() {
     console.log('Controller cargado')
 
     let formData = {}
-    
+    // la validación empieza cuamdo has hecho un evento submit onSubmit. con el preventDefault me cargo el evento submit cuando ya ha cumplido su función
     let form_curso = document.querySelector('#form_curso')
 
     form_curso.addEventListener('submit', onSubmit)

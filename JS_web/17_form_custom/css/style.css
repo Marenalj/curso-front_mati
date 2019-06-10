@@ -64,7 +64,15 @@ fieldset {
     color: burlywood;
 }
 
-:invalid {
-    border: 1px burlywood;
+input:required {
+    background-color: blanchedalmond;
+
 }
 
+/* input:invalid {
+    border: 1px brown solid;
+} */
+
+.invalid {
+    border: 1px brown solid;
+}

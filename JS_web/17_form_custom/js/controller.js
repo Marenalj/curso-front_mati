@@ -21,49 +21,51 @@ export function controller() {
         console.log('Formulario enviado')
         ev.preventDefault()
 
-        // Validación
-        if (document.querySelector('#nombre').validity.valueMissing) {
-            document.querySelector('#nombre').nextElementSibling.innerHTML = 'Completa este campo'
-            return
-
-            //document.querySelector('#nombre').nextElementSibling.innerHTML = validationMessage
-            //document.querySelector('#nombre').validationMessage
-            //return 
-
-        }
-        
-        console.log(document.querySelector('#nombre'))
-        
 
         let aControles = document.querySelectorAll(`[type="text"], 
                                                         [type="email"], 
                                                         [type="password"], 
                                                         [type="date"],
                                                         textarea`)
+        let aChecks = document.querySelectorAll('[ type="checkbox"]')
+        let aRadioSede = document.querySelectorAll('[name="sede"]')
+        let aRadioTurno = document.querySelectorAll('[name="turno"]')
+        let aSelects = document.querySelectorAll('select')
+        let dni = document.querySelector('#dni')
 
-        for (let i = 0; i< aControles.length; i++) {
-            const item = aControles[i];
-            if(!validate(item)) {
-                // return de la función submit. Este bucle está validando el text, email, password, date y textarea.
-                return
-            }
+        aControles.forEach( item => {
+            if (item.willValidate) {
+                item.addEventListener('input', suspendValidation)
+                item.addEventListener('blur', () => {
+                validate(aControles[0])
         }
 
-        aComtroles.forEach(item => validate(item))                                              
+            }
+                )
+        }
 
-        aControles.forEach(item => formData[item.id] = item.value)                                        
         
-        let aChecks = document.querySelectorAll('[ type="checkbox"]')
 
+        // Validación      
+        for (let i = 0; i< aControles.length; i++) {
+            const item = aControles[i];
+            console.log('VALIDANDO', item.name)
+            console.dir(item)
+            if(item.willValidate && !validate(item) {
+                return
+            }
+        } 
+        // return de la función submit. Este bucle está validando el text, email, password, date y textarea. Cuando el primer if se cumple, se ejecuta la función siguiente.
+        // Si no se cumple la primera condición, entonces se ejecuta la función.
+        
+
+        aComtroles.forEach(item => validate(item))                                              
+        aControles.forEach(item => formData[item.id] = item.value)                                                
         aChecks.forEach(item => formData[item.id] = item.checked)
-
-        let aRadioSede = document.querySelectorAll('[name="sede"]')
+        
         setRadio(aRadioSede, formData)
-
-        let aRadioTurno = document.querySelectorAll('[name="turno"]')
         setRadio(aRadioTurno, formData)
 
-        let aSelects = document.querySelectorAll('select')
 
         aSelects.forEach(
             item => setSelect(item, formData )
@@ -73,14 +75,37 @@ export function controller() {
     }
 }
 
-function validate(nodo) {
 
+function validate(nodo) {
+    let msg = ''
     if (nodo.validity.valueMissing) {
-        nodo.nextElementSibling.innerHTML = 'Completa este campo'
-        nodo.autofocus = true;
-        console.dir(nodo)
-        return false
-    }
+        msg = 'Completa este campo' 
+        } else if (nodo.validity.tooShort) {
+            msg = 'Aumenta la longitud de este campo'
+        } else if (nodo.validity.patternMismatch) {
+            msg = 'Adapta el campo al formato requerido'
+        } else if (nodo.validity.customError) {
+            msg = nodo.validationMessage
+        }
+
+        if (msg) {
+            nodo.focur()
+            nodo.classList.add(".invalid")
+            nodo.nextElementSibling.innerHTML = 'Completa este campo'
+            nodo.nextElementSibling.hidden = false
+            console.dir(nodo)
+            return false
+        } else {
+            nodo.classList.remove(".invalid")
+            nodo.nextElementSibling.hidden = true
+            return true
+        }
+    
+
+// que no lo valide cuando estás escribiendo
+function suspendValidation(ev) {
+    ev.target.classList.remove(".invalid")
+    ev.target.nextElementSibling.hidden = true
 
 }
 

@@ -8,7 +8,7 @@ body {
 }
 
 header, footer {
-    background-color: brown;
+    background-color: chocolate;
     color: bisque;
     min-height: 10vh;
     display: flex;
@@ -21,8 +21,13 @@ section {
     flex-wrap: wrap;
 }
 
+section>div {
+    width: 50%;
+    padding: 2rem;
+}
+
 fieldset {
-    border-color: salmon;
+    border-color: rgb(219, 85, 70);
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
 }
@@ -50,36 +55,12 @@ fieldset {
 {
     border: none;
     padding-top: 0.6rem;
-    border-bottom: 1px solid salmon
+    border-bottom: 1px solid darkgoldenrod;
 }
 
 .button-group  button{
     font-weight: bold;
-    color: salmon;
+    color: darkgoldenrod;
     padding: 0.6rem;
 
 }
-
-.error {
-    color: brown;
-    margin: 0 0 0 4rem;
-    background-color: darkgray;
-    border: 2px dimgray groove;
-    padding: .6rem;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 2px darkgray;
-    width: fit-content;
-}
-
-input:required {
-   background-color: bisque; 
-}
-
-/* input:invalid {
-    border: 1px brown solid;
-}  */
-
-
-.invalid {
-    border: 1px brown solid;
-} 

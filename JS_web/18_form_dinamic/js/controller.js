@@ -1,30 +1,39 @@
 import { GENEROS } from "./datos.js";
+import { ajax } from "./ajax.js"
 
 export function controller () {
     console.log('Controller cargado')
+
+    /** Declaración de variables */
     console.log(GENEROS)
     const aGeneros = GENEROS
+    const URLBASE = 'https://www.googleapis.com/books/v1/volumes'
     let iGenero
     let iAutor
     let html = ''
 
+/** Elementos del DOM */
     let selectGeneros = document.querySelector('#generos')
     let selectAutores = document.querySelector('#autores')
     let btnPedir = document.querySelector("#btnPedir")
+    let inNum = document.querySelector('#num')
+    let atLangRbtns = document.querySelectorAll('[name ="lang"]')
 
+/** Manejadores de eventos */
     selectGeneros.addEventListener('change', onChangeGenero)
     selectAutores.addEventListener('change', onChangeAutores)
 
     btnPedir.addEventListener('click', onClickPedir)
-    //btnPedir.onclick = onClickPedir                 forma antigua de definir los eventos
+    //btnPedir.onclick =  onClickPedir
 
-
+/** Inicialización */
     aGeneros.forEach ( item => {
         html += `<option value="${item.value}">${item.label}</option>`     
     })
 
     selectGeneros.innerHTML = html
 
+/** Funciones */
     function onChangeGenero(ev) {
         iGenero = ev.target.selectedIndex
         let aAutores = []
@@ -41,7 +50,6 @@ export function controller () {
         btnPedir.disabled = true
 
     }
-     
 
     function onChangeAutores (ev) { 
         if (ev.target.selectedIndex) {
@@ -56,53 +64,36 @@ export function controller () {
 
     function onClickPedir() {
         console.clear()
-        console.log('Iniciando petición')
-        ajax(aGeneros[iGenero].autores[iAutor].value)
+        console.log('Iniciando peticion')
+
+
+
+        let url = URLBASE + `?q=inauthor:${aGeneros[iGenero].autores[iAutor].value}`
+        url += `&fields=items(volumeInfo(publisher,title,language))`
+        if (setRadio(atLangRbtns) == 'esp')
+            url += `&langRestrict=esp`
     }
-    
-}
-
-function ajax(clave) {
-
-    const url = `https://www.googleapis.com/books/v1/volumes?q=inauthor:${clave}&fields=items(volumeInfo(publisher,title,language))`
-
-    const http = new XMLHttpRequest()
-
-    http.addEventListener('readystatechange', onResponse)
-    //http.onreadystatechange = onResponse
-
-    http.open('GET', url)
-    http.send(null)
-
-    function onResponse() {
-        console.log(http.readyState)
-        if (http.readyState == 4 && http.status == 200) {
-            procesarRespuesta(http.responseText)
-        }
+        url += `&maxResults=${inNum.value}` 
+        ajax(url, 'GET', procesarRespuesta)
     }
-}
 
 function procesarRespuesta(response) {
     let aDatos = JSON.parse(response).items
     console.log(aDatos)
-    let aDatosFinal = aDatos.map(item => {item.volumenInfo} )
+    let aDatosFinal = aDatos.map( item => item.volumeInfo )
     console.log(aDatosFinal)
-
+    mostrarRespuesta(aDatosFinal)
 }
 
 function mostrarRespuesta(aDatos) {
-
-    crearTabla() {
-        let output = document.querySelector('#output')
-        let tabla = '<table>'
-        table += '<tr><th>Título</th><th>Editorial</th><th>Idioma</th></tr>'
-        aDatos.forEach( (item, i) => tabla += 
-        `<tr>
-        <td>${item}</td>
-        <td>${item.publisher}</td>
+    let output = document.querySelector('#output')
+    let tabla = '<table class="tabla">'
+    tabla += '<tr><th>Título</th><th>Editorial</th><th>Idioma</th></tr>'
+    aDatos.forEach( (item) => tabla += `
+        <tr>
+        <td>${item.title}</td>
+        <td>${item.publisher?item.publisher:'n/d'}</td>
         <td>${item.language}</td></tr>`)
-
-        tabla += '</table>'
-        this.tabla.innerHTML = tabla
-    }
+    tabla += '</table>'
+    output.innerHTML = tabla
 }

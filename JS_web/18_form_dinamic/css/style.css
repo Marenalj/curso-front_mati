@@ -23,11 +23,28 @@ section {
 
 section>div {
     width: 50%;
-    padding: 2rem;
+    padding: 1rem 2rem;
 }
 
+section>div.output {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.tabla {
+    color: chocolate;
+    background-color: bisque; 
+    width: 90%;
+    padding: 1rem 0.2rem;
+}
+
+.tabla tr:nth-of-type(2n) {
+    background-color: darkkhaki;
+}
+
+
 fieldset {
-    border-color: rgb(219, 85, 70);
+    border-color: salmon;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
 }
@@ -55,12 +72,12 @@ fieldset {
 {
     border: none;
     padding-top: 0.6rem;
-    border-bottom: 1px solid darkgoldenrod;
+    border-bottom: 1px solid salmon
 }
 
 .button-group  button{
     font-weight: bold;
-    color: darkgoldenrod;
+    color: salmon;
     padding: 0.6rem;
 
 }

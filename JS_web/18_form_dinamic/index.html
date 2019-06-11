@@ -16,8 +16,7 @@
         <div>
             <div class="control-group">
                 <label for="generos">Géneros</label>
-                <select name="generos" id="generos">
-                    
+                <select name="generos" id="generos">                    
                 </select>
             </div>
         </div>
@@ -33,7 +32,18 @@
                 <button type="button" id="btnPedir" disabled>Pedir títulos</button>
             </div>
         </div>
-        <div id="output"></div>
+        <div>
+            <div class="control-group"></div>
+            <label for="num">Número de títulos(10-40)</label>
+            <input type="number" name="num" id="num" max="40" min="10" value="10">
+        </div>
+        <div>
+            <input type="radio" name="lang" id="esp" value="esp">
+            <label for="esp">Español</label>
+            <input type="radio" name="lang" id="all" value="all" checked>
+            <label for="all">Todos</label>
+        </div>
+        <div id="output" id="output"></div>
     </section>
 </body>
 <footer>

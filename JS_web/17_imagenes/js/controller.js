@@ -1,11 +1,15 @@
 export function controller() {
     console.log('Controller cargado')
 
-//variable stich propiedad true
-   // let stich = true
+ // .img_dinamic
 
-   // .img_dinamic
-   // .button
+ let img1_stich = true
+ let img2_stich_depie = false
+ let aBotones = document.querySelectorAll('.button')
+ aBotones.forEach(item => {
+     item.addEventListener('click', onClickImg)
+ });
+
 
 
     function onClickImg(ev) {
@@ -23,7 +27,7 @@ export function controller() {
             } else {
                 nodoImg.src = "./assets/peluche-stitch-lilo-stich-disney-stitch-32-cm-D_NQ_NP_682403-MCO25758255829_072017-F.jpg"
             }
-            img2_stich = !img2_stich_depie
+            img2_stich = !img2_stich
         } 
     }
 }

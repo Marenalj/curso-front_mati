@@ -2,15 +2,20 @@
     box-sizing: border-box;
 }
 
+
+
 header, section {
     display: flex;
     flex-wrap: wrap;
-    align
+    align-items: center;
+}
+
+header {
+    justify-content: space-around;    
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 section figure {

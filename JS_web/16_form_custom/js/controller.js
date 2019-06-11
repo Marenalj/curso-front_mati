@@ -1,4 +1,4 @@
-import { isLetraDNIValida } from "./dni.js";
+import { isLetraDNIValida } from "./dni.js.js";
 
 export function controller() {
     console.log('Controller cargado')

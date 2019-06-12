@@ -15,7 +15,7 @@ export function controller() {
     
     const output = document.querySelector('#output')
     const btnUser = document.querySelector('#btnUser')
-    const btnBorar = document.querySelector('#btnBorar')
+    const btnBorrar = document.querySelector('#btnBorrar')
 
 
     // Manejadores de eventos
@@ -29,10 +29,10 @@ export function controller() {
     function onClickUser(ev) {
 
         function onClickUser (ev) {
-            let boton = ev.target.id // btnUser o btnBorar
+            let boton = ev.target.id // btnUser o btnBorrar
             if (boton == 'btnUser') {
                 ajax(url, 'GET', getUser)
-            } else { // btnBorar
+            } else { // btnBorrar
                 output.innerHTML = ''
             }
         }
@@ -51,7 +51,8 @@ function getUser(datos) {
         genero = 'chico'
     }
 
-        //console.log(imagen). para que las variables se interpreten como       ${}
+        //console.log(imagen). para que las variables se interpreten como funciones ${}
+     
         output.innerHTML = `
         <figure>
             <figcaption class="${genero}">${userName.title} ${userName.first} ${userName.last}</figcaption>
@@ -62,6 +63,7 @@ function getUser(datos) {
         <div class="correo">
             <a href="mailto://${correo}" class="far fa-envelope"></a>
         </div>
-    `
+        `
     }
-}
+
+    }

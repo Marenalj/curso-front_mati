@@ -6,8 +6,9 @@ export function controller() {
 
     // Inicializacion de variablesl     (sitio y url de un usuario al azar)
     
-    const url = 'https://randomuser.me/api/'
-    // "https://randomuser.me/api/?results=10"
+    const url = 'https://randomuser.me/api/?results=10'
+  
+    // "https://randomuser.me/api/""
 
 
     // Nodos del DOM

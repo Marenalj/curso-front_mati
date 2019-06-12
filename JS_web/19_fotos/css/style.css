@@ -27,13 +27,12 @@ section figure {
 
 dialog {
     border: none;
-    background-color: rgb(161, 131, 91);
-    /*min-width: 60%;*/
+    background-color: burlywood;
 }
 
 dialog div {
     margin: 1rem 0;
-    padding: 0rem 1 rem;
+    padding: 0rem 1rem;
     display: flex;
     justify-content: space-between;
 }

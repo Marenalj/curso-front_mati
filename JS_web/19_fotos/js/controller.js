@@ -18,14 +18,15 @@ export function controller() {
         (datos) => {console.log(datos)}
     )
 
-    fetch(URL)
+    fetch(URL_ALBUM1)
     .then( response => response.json())
-    .
+    .then( getFotos )
+
     // Elementos del DOM
     const btnAdd = document.querySelector('#put')
     let aBtnModificar 
     let aBtnBorrar 
-    
+
     const addFotoDlg = document.querySelector('#addFotoDlg')
     const btnAddFoto = document.querySelector('#btnAddFoto')
     const btnCancelAddFoto = document.querySelector('#btnCancelAddFoto')
@@ -37,29 +38,29 @@ export function controller() {
     // Manejadores de eventos
     btnAdd.addEventListener('click', onAdd)
     btnAddFoto.addEventListener('click', onClickDlgAdd)
-    btnCancelAddFoto('click', btnCancelAddFoto)
+    btnCancelAddFoto.addEventListener('click', onClickDlgAdd)
 
-    btnModifyFoto.addEventListener('click', onModify)
-    btnCancelModifyFoto('click', onCancelModify)
+    btnModifyFoto.addEventListener('click', onClickDlgModify)
+    btnCancelModifyFoto.addEventListener('click', onClickDlgModify)
     
 
     /*  "albumId": 1,
     */   
-    function getFotos(response) {
-        console.log(response)
-        let html = ''
-        response.forEach( item => {
-                html += `
-                    <figure>
-                        <a href="${item.url}">
-                        <figcaption>${item.title}</figcaption>
-                        <img src="${item.thumbnailUrl}" alt="">
-                        </a>
-                        <button class="post" id="post_${item.id}" data-id-db="${item.id}">Modificar</button>
-                        <button class="delete" id="delete_${item.id}" data-id-db="${item.id}">Borrar</button>
-                    </figure>
-                `
-            });
+   function getFotos(response) {
+    console.log(response)
+    let html = ''
+    response.forEach( item => {
+            html += `
+                <figure>
+                    <a href="${item.url}">
+                    <figcaption>${item.title}</figcaption>
+                    <img src="${item.thumbnailUrl}" alt="">
+                    </a>
+                    <button class="post" id="post_${item.id}" data-id-db="${item.id}">Modificar</button>
+                    <button class="delete" id="delete_${item.id}" data-id-db="${item.id}">Borrar</button>
+                </figure>
+            `
+        });
 
         sectionFigures.innerHTML = html
         aBtnModificar = document.querySelectorAll('.post')
@@ -84,43 +85,47 @@ export function controller() {
             datos.title = document.querySelector('#title').value
             datos.thumbnailUrl = document.querySelector('#thumbnailUrl').value
             datos.url = document.querySelector('#url').value
+
             let myHeaders = new Headers({
                 "Content-Type": "application/json"
             });
+              
 
 
             // tengo que añadir a la colección de fotos otra foto más y lo tiene que hacer el servidor recibiéndolo por ajax por el método post
             fetch(URL, {method: 'POST', body: JSON.stringify(datos), headers: myHeaders})
             .then (response => response.json())
-            .then (data => console.log(data))
+            .then (data =>  console.log(data))
 
-        } else { // btnCancelAddFoto
-            addFotoDlg.close()
         }
-
-        
+        addFotoDlg.close()
 
     }
 
-    function onModify(ev) {
-        console.log('Modificando', ev.target.dataset.idDb)
-     
-    }
+    function  onClickDlgModify(ev) {
+        let id = ev.target.id // 
+        if (id == 'btnModifyFoto') {
+            let datos = {}
+            datos.title = document.querySelector('#modi_title').value
 
-    function onClickDlgModify(ev) {
-        let id = ev.target.id // btnAdd
-        if (id == 'btnAddFoto') {
-            let datos = URL + 
+            let myHeaders = new Headers({
+                "Content-Type": "application/json"
+            });
+            let url = URL + `/${ev.target.dataset.idDb}`
+            fetch(url, {method: 'PATCH', body: JSON.stringify(datos), headers: myHeaders})
+            .then (response => response.json())
+            .then (data =>  console.log(data))
         }
+        modifyFotoDlg.close()
     }
 
     function onDelete(ev) {
         console.log('Borrando', ev.target.dataset.idDb)
-        let url = URL + '/$(ev.target.dataset.idDb)'
+        let url = URL + `/${ev.target.dataset.idDb}`
+        console.log(url)
         fetch('url', {method: 'DELETE'})
         .then (response => response.json())
-        .then (data => console.log(data))
-        // para ver dónde está el error                        .catch (console.error(error));
-        // )
+        .then (data =>  console.log(data))
+        .catch (error => console.error(error))
     }
 }

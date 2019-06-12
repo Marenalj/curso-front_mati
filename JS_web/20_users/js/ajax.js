@@ -11,7 +11,6 @@ export function ajax(url, metodo, callback) {
     function onResponse() {
         console.log(http.readyState)
         if (http.readyState == 4 && http.status == 200) {
-            // parseado de JSON
             callback(JSON.parse(http.responseText))
         }
     }

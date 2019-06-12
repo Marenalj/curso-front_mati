@@ -1,19 +1,46 @@
-import { ajax } from "./ajax.js";
 
 export function controller() {
-    const URL = 'https://jsonplaceholder.typicode.com/photos?albumId=1'
-    const URL_USERS = "https://randomuser.me/api/?results=10"
+
+    const URL = 'https://jsonplaceholder.typicode.com/photos'
+    const URL_ALBUM1 = URL+ '?albumId=1'
     const aFotos = []
     let sectionFigures = document.querySelector('#figures')
-    ajax(URL, 'GET', getFotos )
 
+    // maneja promesas que se gestionan con .then (si la promesa me da bien) y .catch (si la promesa me da error). A then le paso funciones para que se ejecuten. 
+    /* fetch(URL).then(x)
+    function x(response){
+        return response.json()
+    }*/
+
+    fetch(URL).then(
+        (response) => response.json()
+    ).then(
+        (datos) => {console.log(datos)}
+    )
+
+    fetch(URL)
+    .then( response => response.json())
+    .
     // Elementos del DOM
     const btnAdd = document.querySelector('#put')
     let aBtnModificar 
     let aBtnBorrar 
+    
+    const addFotoDlg = document.querySelector('#addFotoDlg')
+    const btnAddFoto = document.querySelector('#btnAddFoto')
+    const btnCancelAddFoto = document.querySelector('#btnCancelAddFoto')
+
+    const modifyFotoDlg = document.querySelector('#modifyFotoDlg')
+    const btnModifyFoto = document.querySelector('#btnModifyFoto')
+    const btnCancelModifyFoto = document.querySelector('#btnCancelModifyFoto')
 
     // Manejadores de eventos
     btnAdd.addEventListener('click', onAdd)
+    btnAddFoto.addEventListener('click', onClickDlgAdd)
+    btnCancelAddFoto('click', btnCancelAddFoto)
+
+    btnModifyFoto.addEventListener('click', onModify)
+    btnCancelModifyFoto('click', onCancelModify)
     
 
     /*  "albumId": 1,
@@ -21,16 +48,15 @@ export function controller() {
     function getFotos(response) {
         console.log(response)
         let html = ''
-        JSON.parse(response)     
-            .forEach( item => {
+        response.forEach( item => {
                 html += `
                     <figure>
                         <a href="${item.url}">
                         <figcaption>${item.title}</figcaption>
                         <img src="${item.thumbnailUrl}" alt="">
                         </a>
-                        <button class="post" id="post_${item.id}">Modificar</button>
-                        <button class="delete" id="delete_${item.id}">Borrar</button>
+                        <button class="post" id="post_${item.id}" data-id-db="${item.id}">Modificar</button>
+                        <button class="delete" id="delete_${item.id}" data-id-db="${item.id}">Borrar</button>
                     </figure>
                 `
             });
@@ -43,15 +69,58 @@ export function controller() {
     }
 
 
-    function onAdd () {
-        console.log('Añadiendo')
+    function onModify () {
+        //console.log('Añadiendo')
+        modifyFotoDlg.showModal()
+    }
+
+    function onClickDlgAdd(ev) {
+
+        let id = ev.target.id // btnAddFoto o btnCancelAddFoto
+        if (id == 'btnAddFoto') {
+            // añadir
+            let datos = {}
+            datos.albumId = document.querySelector('#albumId').value
+            datos.title = document.querySelector('#title').value
+            datos.thumbnailUrl = document.querySelector('#thumbnailUrl').value
+            datos.url = document.querySelector('#url').value
+            let myHeaders = new Headers({
+                "Content-Type": "application/json"
+            });
+
+
+            // tengo que añadir a la colección de fotos otra foto más y lo tiene que hacer el servidor recibiéndolo por ajax por el método post
+            fetch(URL, {method: 'POST', body: JSON.stringify(datos), headers: myHeaders})
+            .then (response => response.json())
+            .then (data => console.log(data))
+
+        } else { // btnCancelAddFoto
+            addFotoDlg.close()
+        }
+
+        
+
     }
 
     function onModify(ev) {
-        console.log('Modificando', ev.target.id)
+        console.log('Modificando', ev.target.dataset.idDb)
+     
+    }
+
+    function onClickDlgModify(ev) {
+        let id = ev.target.id // btnAdd
+        if (id == 'btnAddFoto') {
+            let datos = URL + 
+        }
     }
 
     function onDelete(ev) {
-        console.log('Borrando', ev.target.id)
+        console.log('Borrando', ev.target.dataset.idDb)
+        let url = URL + '/$(ev.target.dataset.idDb)'
+        fetch('url', {method: 'DELETE'})
+        .then (response => response.json())
+        .then (data => console.log(data))
+        // para ver dónde está el error                        .catch (console.error(error));
+        // )
     }
 }

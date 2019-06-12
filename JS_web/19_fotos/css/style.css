@@ -24,3 +24,16 @@ section figure {
     padding: 1rem;
     text-align: center;
 }
+
+dialog {
+    border: none;
+    background-color: rgb(161, 131, 91);
+    /*min-width: 60%;*/
+}
+
+dialog div {
+    margin: 1rem 0;
+    padding: 0rem 1 rem;
+    display: flex;
+    justify-content: space-between;
+}

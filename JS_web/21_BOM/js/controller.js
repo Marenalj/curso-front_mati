@@ -1,26 +1,45 @@
 export function controller() {
-    console.log('Controller cargado')
+  console.log('Controller cargado')
 
-    const btnProbar = document.queryCommandValue('#brnProbar')
+  const btnProbar = document.querySelector('#btnProbar')
 
-    btnProbar.addEventListener('click'. onClickProbar)
+  btnProbar.addEventListener('click', onClickProbar)
 
-    function onClickProbar() {
-        // window.alert()
-        // window.prompt()
-        // window.confirm()
+  document.querySelector('#btnLocalizar').addEventListener('click' , onClick)
 
-        //let x = window.prompt('Probando')
-        let handler = window.open()
-        handler.location.assign('http://google.com')
-        window.setTimeout(() = => {
-      //      handler.close()
-        }, 2000)
-        console.log(handler)
+  
+  async function onClick () {
+      let position = await localizar()
+      console.log(position)
+  }
 
-        let handTime = setTimeout(() => {}, 2000)
-        clearTimeout(handTime)
 
-        let handInterval = setInterval(() => {}, 2000)
-        clearInterval(handInterval)      
-    }
+  function onClickProbar() {
+      // window.alert('Probando')
+      // window.prompt('Probando')
+      // window.confirm('Probando')
+
+      let handler = window.open()
+      handler.location.assign('http://google.com')
+      window.setTimeout(() =>{
+          // handler.close()
+      }, 2000)
+      console.log(handler)
+
+      let handTime = setTimeout(() => {}, 2000)
+      clearTimeout(handTime)
+
+      let handInterval = setInterval(() => {}, 10)
+      clearInterval(handInterval)
+  }
+
+
+  function localizar() {
+      return new Promise( (resolve, reject) => {
+          navigator.geolocation.getCurrentPosition( (position) => {
+              resolve(position)
+          })
+      })
+      
+  }
+}

@@ -160,9 +160,8 @@ export function controller() {
         modifyFotoDlg.close()
     }
 
-
     function onDelete(ev) {
-        console.log('Borrando', ev.target.dataset.idDb)
+        itemActual =  ev.target.dataset.idDb
         console.log('Borrando', itemActual)
         let url = URL + `/${itemActual}`
         console.log(url)
@@ -171,14 +170,12 @@ export function controller() {
             "Content-Type": "application/json"
         });
 
-        fetch(url, {method: 'DELETE', headers: myHeaders})
-        .then (response => response.json())
-        .then (data =>  
-            { if (data) {
-                aFotos.splice(indexFoto(),1)
-                renderFotos()
-            } else {
-                console.log(data)
-            }            
-    })
+
+        fetch('url', {method: 'DELETE', headers: myHeaders})
+        .then (response => {
+            console.log(response)
+            response.json()})
+        .then (data =>  console.log(data))
+        .catch (error => console.error(error))
+    }
 }

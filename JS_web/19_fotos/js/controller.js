@@ -171,7 +171,7 @@ export function controller() {
             "Content-Type": "application/json"
         });
 
-        fetch('url', {method: 'DELETE', headers: myHeaders})
+        fetch(url, {method: 'DELETE', headers: myHeaders})
         .then (response => {
             console.log(response)
             response.json()})

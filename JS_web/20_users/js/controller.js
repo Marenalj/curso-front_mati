@@ -22,7 +22,7 @@ export function controller() {
     // Manejadores de eventos
 
     btnUser.addEventListener('click', onClickUser )
-    btnBorar.addEventListener('click', onClickUser)
+    btnBorrar.addEventListener('click', onClickUser)
 
 
     // Funciones
@@ -37,7 +37,8 @@ export function controller() {
                 output.innerHTML = ''
             }
         }
-
+    }
+}
 // función para recoger los datos recogidos en la url de ajax. Propiedad results es un array
 
 function getUser(datos) {
@@ -66,5 +67,4 @@ function getUser(datos) {
         </div>
         `
     }
-
-    }
+    

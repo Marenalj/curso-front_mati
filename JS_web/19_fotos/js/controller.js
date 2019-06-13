@@ -172,10 +172,13 @@ export function controller() {
         });
 
         fetch(url, {method: 'DELETE', headers: myHeaders})
-        .then (response => {
-            console.log(response)
-            response.json()})
-        .then (data =>  console.log(data))
-        .catch (error => console.error(error))
-    }
+        .then (response => response.json())
+        .then (data =>  
+            { if (data) {
+                aFotos.splice(indexFoto(),1)
+                renderFotos()
+            } else {
+                console.log(data)
+            }            
+    })
 }

@@ -1,70 +1,58 @@
-import { ajax } from "./ajax.js";
+import { ajax } from "./ajax.js"
 
 export function controller() {
+    console.log('Controler cargado')
 
-    console.log('Controller cargado')
+    // 0. Inicialización de variables
+    const url = 'https://randomuser.me/api/' //devuelve un usuario al azar
+    //const url = 'https://randomuser.me/api/?results=10' //devuelve un usuario al azar
+    console.dir(url)
 
-    // Inicializacion de variablesl     (sitio y url de un usuario al azar)
-    
-    const url = 'https://randomuser.me/api/?results=10'
-  
-    // "https://randomuser.me/api/""
-
-
-    // Nodos del DOM
-
-    
-    const output = document.querySelector('#output')
+    // 1. Nodos del DOM
     const btnUser = document.querySelector('#btnUser')
+    const output = document.querySelector('#output')
     const btnBorrar = document.querySelector('#btnBorrar')
 
-
-    // Manejadores de eventos
-
-    btnUser.addEventListener('click', onClickUser )
+    // 2. Manejadores de eventos
+    btnUser.addEventListener('click', onClickUser)
     btnBorrar.addEventListener('click', onClickUser)
 
-
-    // Funciones
-
+    // 3. Funcion del manejador
     function onClickUser(ev) {
 
-        function onClickUser (ev) {
-            let boton = ev.target.id // btnUser o btnBorrar
-            if (boton == 'btnUser') {
-                ajax(url, 'GET', getUser)
-            } else { // btnBorrar
-                output.innerHTML = ''
-            }
+        let boton = ev.target.id
+
+        if (boton == 'btnUser') {
+            ajax(url, 'GET', getUser)
+        } else {
+            output.innerHTML = ' '
         }
-    }
-}
-// función para recoger los datos recogidos en la url de ajax. Propiedad results es un array
 
-function getUser(datos) {
-    console.log(datos.results[0])
-    let imagenes = datos.results[0].picture 
-    let userName = datos.results[0].name
-    let genero = datos.results[0].gender
-    let correo = datos.results[0].email
-    if (genero == 'female') {
-        genero = 'chica'
-    } else {
-        genero = 'chico'
     }
 
-        //console.log(imagen). para que las variables se interpreten como funciones ${}
-     
+    function getUser(datos) {
+        console.dir(datos.results[0])
+        let userName = datos.results[0].name
+        let genero = datos.results[0].gender
+        let correo = datos.results[0].email
+        
+        if (genero == 'female') {
+            genero = 'chica'
+        } else  {
+            genero = 'chico'
+        }
+
         output.innerHTML = `
         <figure>
-            <figcaption class="${genero}">${userName.title} ${userName.first} ${userName.last}</figcaption>
-            <a href="${imagenes.large}">
-                <img src="${imagenes.thumbnail}" alt="Imagen del usuario">
-            </a>
+        <figcaption class="${genero}">${userName.title} ${userName.first} ${userName.last} </figcaption>
+        <a href="${datos.results[0].picture.large}">
+        <img src="${datos.results[0].picture.thumbnail}" alt="imagen del usuario"></a>
         </figure>
         <div class="correo">
-            <a href="mailto://${correo}" class="far fa-envelope"></a>
-        </div>
-        `
+        <a href="mailto://${correo}" class="far fa-envelope"></a>
+        </div>`
+        
+        
     }
-    
+
+}

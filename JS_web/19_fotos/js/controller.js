@@ -166,8 +166,15 @@ export function controller() {
         console.log('Borrando', itemActual)
         let url = URL + `/${itemActual}`
         console.log(url)
-        fetch('url', {method: 'DELETE'})
-        .then (response => response.json())
+
+        let myHeaders = new Headers({
+            "Content-Type": "application/json"
+        });
+
+        fetch('url', {method: 'DELETE', headers: myHeaders})
+        .then (response => {
+            console.log(response)
+            response.json()})
         .then (data =>  console.log(data))
         .catch (error => console.error(error))
     }

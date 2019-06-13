@@ -5,7 +5,7 @@ export function controller() {
     const URL_ALBUM1 = URL+ '?albumId=1'
     let aFotos = []
     // la variable const aFotos son mis datos
-    const itemActual = 0
+    var itemActual = 0
     // la variable const itemActual tiene el valor de la posición del item en el que estoy
 
     // maneja promesas que se gestionan con .then (si la promesa me da bien) y .catch (si la promesa me da error). A then le paso funciones para que se ejecuten. 

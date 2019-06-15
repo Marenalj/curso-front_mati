@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: chocolate;
     color: bisque;
     padding: 2rem;
     font-family: 'Permanent Marker', cursive;
@@ -74,7 +74,7 @@ section output figcaption {
 /* CSS del footer*/
 
 .main-footer {
-    background-color: brown;
+    background-color: chocolate;
     color: bisque;
     padding-top: 1.2rem;
     padding-bottom: 1.5rem;

@@ -1,11 +1,11 @@
 import { ajax } from "./ajax.js"
 
 export function controller() {
-    console.log('Controler cargado')
+    console.log('Controller cargado')
 
     // 0. Inicialización de variables
     const url = 'https://randomuser.me/api/' //devuelve un usuario al azar
-    //const url = 'https://randomuser.me/api/?results=10' //devuelve un usuario al azar
+    //const url = 'https://randomuser.me/api/?results=10' //devuelve 10 usuarios al azar
     console.dir(url)
 
     // 1. Nodos del DOM

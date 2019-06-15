@@ -4,5 +4,5 @@ import {controller} from './controller.js'
 Es buena practica crear un módulo aparte e importar la función principal
 */
 
-// Proceso ASINCRONO
+// Proceso ASÍNCRONO
 document.addEventListener('DOMContentLoaded', controller)

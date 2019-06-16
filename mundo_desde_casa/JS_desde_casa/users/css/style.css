@@ -12,7 +12,6 @@ h1 {margin: 0;
     padding: 1rem;
     text-transform: uppercase;
     color: darkgreen;
-    text-align: center;
     display: flex;
 }
 
@@ -29,9 +28,6 @@ button:hover {
     background-color: darkgoldenrod;
 }
 
-figcaption{ text-transform: uppercase; }
-
-figcaption {font-size: 0.8rem; font-weight:  bold; }
 .chico { color: olivedrab; }
 .chica { color: steelblue; }
 
@@ -42,11 +38,7 @@ figcaption {font-size: 0.8rem; font-weight:  bold; }
     justify-content: center;
 }
 
-.user {
-    background-color: burlywood; 
-    width: 20%;
-    margin: 1rem;
-}
+
 img { margin: 0.8rem 0; width: 98%; }
 
 figure, .correo  { margin: 1rem; }

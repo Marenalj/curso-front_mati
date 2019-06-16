@@ -1,4 +1,4 @@
-import { ajax } from "./ajax.js.js"
+import { ajax } from "./ajax.js"
 
 export function controller() {
     console.log('Controller cargado')

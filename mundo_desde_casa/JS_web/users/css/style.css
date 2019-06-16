@@ -27,7 +27,9 @@ button {
 button:hover {
     background-color: darkgoldenrod;
 }
+figcaption{ text-transform: uppercase; }
 
+figcaption {font-size: 0.8rem; font-weight:  bold; }
 .chico { color: olivedrab; }
 .chica { color: steelblue; }
 

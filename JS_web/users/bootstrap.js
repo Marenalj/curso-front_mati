@@ -1,4 +1,4 @@
-import {controller} from './controller.js.js'
+import {controller} from './controller.js'
  
 /*
 Es buena practica crear un módulo aparte e importar la función principal

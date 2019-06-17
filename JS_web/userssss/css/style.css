@@ -1,0 +1,66 @@
+
+
+body {
+    margin:0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+header, footer {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(74, 185, 185);
+}
+
+h1 {margin: 0;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: blue;
+    text-align: center;}
+
+section {margin: 1rem; min-height: 77vh;}
+button {
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+button:hover {
+    background-color: gold;
+}
+
+figcaption{ text-transform: uppercase; }
+
+figcaption {font-size: 0.8rem; font-weight:  bold; }
+.chico { color: red; }
+.chica { color: blue; }
+
+#output { 
+    display: flex; 
+    width: 100%; 
+    flex-wrap: wrap;  
+    justify-content: center;
+}
+
+.user {
+    background-color: cadetblue; 
+    width: 20%;
+    margin: 1rem;
+}
+
+
+figure, .correo  { margin: 1rem; }
+
+.correo a {
+    color: black;
+
+}
+
+
+address {
+    text-align: center;
+    padding: 1rem;
+    color: black;
+}

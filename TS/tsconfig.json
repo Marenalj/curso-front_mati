@@ -1,16 +1,10 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "outDir": "./js",
-        "sourceMap": true,
-        "plugins": []
-    }
-}
-
-{
-    "compilerOptions": {
-      "plugins": [
+  "compilerOptions": {
+      "module": "commonjs",
+      "target": "es6",
+      "outDir": "./js",
+      "sourceMap": true,
+       "plugins": [
         {
           "name": "typescript-tslint-plugin",
           "alwaysShowRuleFailuresAsWarnings": false,
@@ -19,5 +13,7 @@
           "suppressWhileTypeErrorsPresent": false
         }
       ]
-    }
   }
+
+
+}

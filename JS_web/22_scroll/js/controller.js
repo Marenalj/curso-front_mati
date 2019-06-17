@@ -33,12 +33,12 @@ export function controller() {
             isSticky = false
         }
         let id = 3
-        if (scrollY < offsets[1]) {
+        if (scrollY < aOffsets[1]) {
             // estoy en inicio
-        } else if (scrollY < offSets[2]) {
+        } else if (scrollY < aOffSets[2]) {
             // estoy en sección 1 (porfolio)
             id = 0
-        } else if (scrollY < offSets[3]) {
+        } else if (scrollY < aOffSets[3]) {
             // estoy en sección 2 (clientes)
             id = 2
         } else {

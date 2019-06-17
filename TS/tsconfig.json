@@ -3,6 +3,21 @@
         "module": "commonjs",
         "target": "es6",
         "outDir": "./js",
-        "sourceMap": true
+        "sourceMap": true,
+        "plugins": []
     }
 }
+
+{
+    "compilerOptions": {
+      "plugins": [
+        {
+          "name": "typescript-tslint-plugin",
+          "alwaysShowRuleFailuresAsWarnings": false,
+          "ignoreDefinitionFiles": true,
+          "configFile": "../tslint.json",
+          "suppressWhileTypeErrorsPresent": false
+        }
+      ]
+    }
+  }

@@ -8,12 +8,13 @@ class Persona {
         console.log(`Hola ${aQuien}, soy ${this.nombre}`);
     }
 }
-person1 = altura = 175;
+let person1 = new Persona('Pepe', 23);
+// person1.altura = 175 daría un error en TS
 console.log(person1);
 person1.saludar();
 class Alumno extends Persona {
     constructor(nombre, edad, curso) {
-        super(number, edad);
+        super(nombre, edad);
         this.curso = curso;
     }
     saludar(aQuien = 'amigo') {
@@ -21,7 +22,7 @@ class Alumno extends Persona {
         console.log(`Estoy estudiando ${this.curso}`);
     }
 }
-let alumno1 = new Alumno('Elena', 22, 'wordPress');
+let alumno1 = new Alumno('Natalia', 22, 'WordPress');
 console.log(alumno1);
 alumno1.saludar();
 //# sourceMappingURL=03_clases.js.map

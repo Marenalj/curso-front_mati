@@ -1,8 +1,8 @@
 class Persona {
-    nombre
-    edad
-    alma
-    constructor (nombre, edad) {
+    nombre: string
+    edad: number
+    alma: boolean    
+    constructor (nombre: string, edad: number) {
         this.nombre = nombre
         this.edad = edad
         this.alma = true
@@ -12,7 +12,8 @@ class Persona {
     }
 }
 
-let person1 = new Persona('Pepe', 23)
+let person1: Persona
+person1 = new Persona('Pepe', 23)
 
 // person1.altura = 175 daría un error en TS
 
@@ -20,8 +21,8 @@ console.log(person1)
 person1.saludar()
 
 class Alumno extends Persona {
-    curso
-    constructor(nombre, edad, curso) {
+    curso: string;
+    constructor(nombre: string, edad: number, curso: string) {
         super(nombre, edad)
         this.curso = curso
     }

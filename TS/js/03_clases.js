@@ -8,7 +8,8 @@ class Persona {
         console.log(`Hola ${aQuien}, soy ${this.nombre}`);
     }
 }
-let person1 = new Persona('Pepe', 23);
+let person1;
+person1 = new Persona('Pepe', 23);
 // person1.altura = 175 daría un error en TS
 console.log(person1);
 person1.saludar();

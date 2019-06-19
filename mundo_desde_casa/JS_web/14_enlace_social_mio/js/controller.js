@@ -29,7 +29,7 @@ export function controller () {
         elementsArray.push(element4);
     }
     
-    Elements("Twitter", "Facebook", "Linkedin", "Instagram");
+    Elements("Twitter", "Linkedin",  "Facebook", "Github", "Instagram");
 
     let str = '<ul>'
 
@@ -39,4 +39,4 @@ export function controller () {
 
     str += '</ul>';
     document.getElementById("elementContainer").innerHTML = str;
-    console.log(document.getElementById("elementContainer"),innerHTML)
+    console.log(document.getElementById("elementContainer"),innerHTML)}

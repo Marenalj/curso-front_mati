@@ -28,7 +28,6 @@ export function controller () {
         elementsArray.push(element3);
         elementsArray.push(element4);
     }
-    
     Elements("Twitter", "Linkedin",  "Facebook", "Github", "Instagram");
 
     let str = '<ul>'

@@ -21,7 +21,7 @@ fdescribe('Aprendiendo Jasmine', () => {
 
     it('should throw error if n=-5', () => {
         const n = -5;
-        expect(factorial(n)).toThrow('InvalidNumber');
+        expect(factorial(n)).toThrowError('No existe el factorial de un número negativo');
 
     });
 });

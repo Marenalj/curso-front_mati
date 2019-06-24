@@ -1,41 +1,28 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
 import { CoreModule } from '../core.module';
+import { MenuComponent } from './menu.component';
 
-describe('AppComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
+describe('MenuComponent', () => {
+
+  let component: MenuComponent;
+  let fixture: ComponentFixture<MenuComponent>;
 
   beforeEach(async(() => {
    TestBed.configureTestingModule({
-     imports: [
-       RouterTestingModule,
-       CoreModule
-     ],
      declarations: [
-       AppComponent
-     ],
+       MenuComponent
+     ]
    }).compileComponents();
  }));
 
   beforeEach( () => {
-   fixture = TestBed.createComponent(AppComponent);
+   fixture = TestBed.createComponent(MenuComponent);
    // app = fixture.debugElement.componentInstance;
-   app = fixture.componentInstance;
+   component = fixture.componentInstance;
  });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 });

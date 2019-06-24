@@ -15,6 +15,7 @@ import { ContactosModule } from './contactos/contactos.module'; */
     AppComponent
   ],
   imports: [
+    BrowserModule,
     FormsModule,
     AppRoutingModule,
     CoreModule,

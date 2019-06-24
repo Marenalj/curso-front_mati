@@ -22,7 +22,7 @@ describe('La función factorial', () => {
     it('should throw error if n=-5', () => {
         const n = -5;
         // expect(factorial.bind(n)).toThrow();
-        expect(factorial.bind(n)).toThrowError('No existe el factorial de un número negativo');
+        expect(factorial.bind(n)).toThrowError('No existe el factorial de un negativo');
     });
 
 

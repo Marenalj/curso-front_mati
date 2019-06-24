@@ -4,7 +4,7 @@ export function factorial(n: number) {
     } else if ( n > 1) {
         return n * factorial(n - 1);
     } else {
-        // throw new Error('No existe el factorial de un negativo')
+        throw new Error('No existe el factorial de un negativo')
     }
 }
 

@@ -27,7 +27,6 @@ export class SaludarComponent implements OnInit {
     } else {
       return this.nombre.toUpperCase();
     }
- }
+ }*/
 
-} */
-
+}

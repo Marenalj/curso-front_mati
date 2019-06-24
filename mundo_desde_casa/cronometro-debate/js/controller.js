@@ -20,17 +20,17 @@ export function controller() {
 
 
     /** Funciones */
-    // Tiempo (3 minutos) del bloque Inicio
+
 
     function onClickPlay()  {
 
         console.log('Contador iniciado 1')
 
             handTime = setInterval(( ) => {
-            segundoActivo += 3
+            segundoActivo += 1
             comprobar()
             output.innerHTML = `<p>${segundoActivo}</p>`
-        }, 3000)
+        }, 1000)
 
     }
 

@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(106, 106, 155); 
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header, section {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    border-bottom: 1px dashed black;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(167, 167, 173);
+    width: 45%;
+    float: left;
+}
+
+.uno { 
+    background-color: blueviolet;
+}
+.dos { 
+    background-color: cornflowerblue;
+}
+.limpiar {
+    clear: both;
+}
+
+.cronometro-afavor {
+    height:60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.content-botones-afavor {
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.output1 {
+    font-size: 8rem;
+    text-align: left;
+}
+
+.output1 p { 
+    margin-top: 0;
+    font-size: 5rem;
+    padding-top: 10rem;
+    text-align: left;
+
+}
+
+button{
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 0.7rem 1rem;
+    text-transform: uppercase;
+}
+
+.button-activo {
+    background-color: burlywood;
+}
+
+.input {
+    text-align: center;
+
+}
+
+
+
+.cronometro-encontra {
+    height:60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.content-botones-encontra {
+    padding-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.output2 {
+    font-size: 8rem;
+    text-align: right;
+}
+
+.output2 p { 
+    margin-top: 0;
+    text-align: right;
+}
+
+button{
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 0.7rem 1rem;
+    text-transform: uppercase;
+}
+
+.button-activo {
+    background-color: burlywood;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2em;
+    font-family: cursive;
+}

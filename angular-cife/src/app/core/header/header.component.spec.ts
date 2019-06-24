@@ -23,3 +23,13 @@ describe('HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+it(`should have as title 'angular-cife'`, () => {
+  expect(component.title).toEqual('Angular-CIFE');
+});
+
+it('should render title in a h1 tag', () => {
+  const compiled = fixture.debugElement.nativeElement;
+  expect(compiled.querySelector('h1').textContent).toContain('Bienvenidos');
+  });
+})

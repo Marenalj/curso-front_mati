@@ -38,7 +38,7 @@ export function controller() {
 
     function comprobar() {
 
-        console.log('hola')
+    /*     console.log('hola') */
 
         if (segundoActivo == 6) {
             //paramos el evento

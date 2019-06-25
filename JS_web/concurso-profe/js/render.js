@@ -1,4 +1,4 @@
-import { isRey } from './helper.js'
+import { isRey } from './helper.js.js'
 
 /** Function render
  * @description renderiza un mensaje en un nodo dado, dependiendo del resultado de la llamada a otra función

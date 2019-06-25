@@ -1,4 +1,4 @@
-import { REYES } from "./data.js";
+import { REYES } from "./data.js.js";
 
 /**
  * Function isRey

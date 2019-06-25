@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarea } from 'src/app/models/tarea.model';
-import { falTrash, faEdit, IconDefinition } from '@'
-import { faCoffee } from @fontawesome/free-solid-svg icons';
+import { faTrash, faEdit, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-lista-simple',
@@ -11,20 +11,21 @@ import { faCoffee } from @fontawesome/free-solid-svg icons';
 export class ListaSimpleComponent implements OnInit {
   tarea: Tarea;
   aTareas: Array<Tarea>;
-  faTrash = IconDefinition;
+  faTrash: IconDefinition;
+  faEdit: IconDefinition;
   storageName: string;
 
   constructor(public ls: LocalStorageService) { }
 
   ngOnInit() {
     this.faTrash = faTrash;
+    this.faEdit = faEdit;
     this.tarea = new Tarea();
-    this.aTareas = this.ls.readStorage(this.storageName);
     this.storageName = 'tareas';
+    this.aTareas = this.ls.readStorage(this.storageName);
   }
 
   onClickAdd() {
-// tslint:disable-next-line: triple-equals
     if (this.tarea.nombre === '') {
       return;
     }
@@ -40,17 +41,16 @@ export class ListaSimpleComponent implements OnInit {
   }
 
   onClickEditar(i: number) {
-    this.aTareas.splice(i, 1);
-    this.ls.saveStorage(this.storageName)
+    this.aTareas[i].isEdited =  !this.aTareas[i].isEdited;
+    console.log(this.aTareas);
   }
 
-  onClickborrar(i: number) {
+  onClickBorrar(i: number) {
     this.aTareas.splice(i, 1);
     this.ls.saveStorage(this.storageName, this.aTareas);
   }
 
   onBlur(ev: any, i: number) {
-    // console.dir(ev.target.textContent);
     this.aTareas[i].nombre = ev.target.textContent;
     this.ls.saveStorage(this.storageName, this.aTareas);
   }
@@ -60,25 +60,4 @@ export class ListaSimpleComponent implements OnInit {
     this.ls.saveStorage(this.storageName, this.aTareas);
   }
 
-
-/*    // Persistencia en LocaLStorage
-
-  saveStorage(name: string, data: Array<any>) {
-    window.localStorage.setItem(name, JSON.stringify(data));
 }
-
-  readStorage(name: string) {
-    let read = [];
-    const cadena = window.localStorage.getItem(name);
-    // console.log(cadena)
-    if (cadena) {
-        read = JSON.parse(cadena);
-    }
-    return read;
-}
-
-  removeStorage(name: string) {
-    window.localStorage.removeItem(name);
-  } */
-}
- 

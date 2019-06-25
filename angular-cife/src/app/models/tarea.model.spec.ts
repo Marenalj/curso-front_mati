@@ -1,7 +1,7 @@
-import { Tarea.Model } from './tarea.model';
+import { Tarea } from './tarea.model';
 
 describe('Tarea.Model', () => {
   it('should create an instance', () => {
-    expect(new Tarea.Model()).toBeTruthy();
+    expect(new Tarea()).toBeTruthy();
   });
 });

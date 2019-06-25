@@ -1,14 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-
+import {} from '@fontawesome/angular-frontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-/* import { HomeModule } from './home/home.module';
-import { TareasModule } from './tareas/tareas.module';
-import { LibrosModule } from './libros/libros.module';
-import { ContactosModule } from './contactos/contactos.module'; */
+
 
 @NgModule({
   declarations: [

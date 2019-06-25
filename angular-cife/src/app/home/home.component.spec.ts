@@ -10,7 +10,9 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent, SaludarComponent ],
+      declarations: [ 
+        HomeComponent, 
+        SaludarComponent ],
       imports: [FormsModule]
     })
     .compileComponents();

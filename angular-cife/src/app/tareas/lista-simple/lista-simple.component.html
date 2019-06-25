@@ -1,3 +1,41 @@
-<p>
-  lista-simple works!
-</p>
+<!-- aprendiendo angular
+ -->
+ <section>
+  <header>
+    <h2>
+      Lista de Tareas simple
+    </h2>
+  </header>
+  <div class='control-group'>
+    <label for="tarea">Nueva tarea</label>
+<!--  operador de propiedades-->
+    <input type="text" name="tarea" id="tarea"
+      [(ngModel)] = "tarea.nombre" (change)="onClickAdd()">
+<!-- El operador de doble binding
+          equivalente a  (input) = "nombre = $event.target.value" y [value]="nombre" -->
+
+  </div>
+  <div class='control-group'>
+    <!-- () operador de eventos -->
+    <button (click)="onClickAdd()" type="button">Añadir</button>
+    <button (click)="onClickDelete()" type="button" title="Borrar todas las tareas"
+    [disabled]="!aTareas.length">Borrar</button>
+  </div>
+
+
+  <footer *ngIf="aTareas.length">
+    <!-- {{}} operador de interpolación  de expresiones-->
+   <p>Lista de tareas</p>
+   <ul>
+     <li *ngFor="let item of aTareas; let i = index">
+       <input type="checkbox" [name]="'check'+(1+1)" [id]="'check' (+1+1)" 
+       [(ngModel)] = "item.isCompleted" (click) ="onSelectCheck()">
+       <span [contentEditable]="item.isEdited"
+       (blur)="onBlur($event, i)">{{ item.nombre }}</span> -
+       <fa-icon [icon]="faEdit" class="icon" (click)="onClickEditar($event, i)"></fa-icon>
+       <fa-icon [icon]="faTrash" class="icon" (click)="onClickBorrar(i)"></fa-icon>
+      </li>
+   </ul>
+    </footer>
+</section>
+

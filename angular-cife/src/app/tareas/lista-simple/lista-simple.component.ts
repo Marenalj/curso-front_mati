@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarea } from 'src/app/models/tarea.model';
-import { faAnchor, faTrash, faEdit, IconDefinition } from '@fontawesome/free-solid-svg-icons';
+import { faAnchor, faTrash, faEdit, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({

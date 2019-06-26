@@ -5,6 +5,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { from } from 'rxjs';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
@@ -17,7 +21,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     CoreModule
   ],
-  providers: [],
+  providers: [ { provide: LOCALE_ID, useValue: 'es' }],
   exports: [],
   bootstrap: [AppComponent]
 })

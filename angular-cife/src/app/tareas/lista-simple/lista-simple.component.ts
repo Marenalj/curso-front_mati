@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarea } from 'src/app/models/tarea.model';
-import { faTrash, faEdit, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faAnchor, faTrash, faEdit, IconDefinition } from '@fontawesome/free-solid-svg-icons';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class ListaSimpleComponent implements OnInit {
   aTareas: Array<Tarea>;
   faTrash: IconDefinition;
   faEdit: IconDefinition;
+  faAnchor: IconDefinition;
   storageName: string;
 
   constructor(public ls: LocalStorageService) { }
@@ -20,6 +21,7 @@ export class ListaSimpleComponent implements OnInit {
   ngOnInit() {
     this.faTrash = faTrash;
     this.faEdit = faEdit;
+    this.faAncla = faAnchor;
     this.tarea = new Tarea();
     this.storageName = 'tareas';
     this.aTareas = this.ls.readStorage(this.storageName);

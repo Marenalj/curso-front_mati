@@ -9,10 +9,9 @@
       <div>
         <ul>
           <li *ngFor="let item of aPosts; let i = index">
-            <app-post [post]="item" [index]="i" (eventBorrar)="onBorrar"($event)></app-post>
+            <app-post [post]="item" [index]="i" (eventBorrar)="onBorrar($event)"></app-post>
           </li>
         </ul>
-        <app-post></app-post>
       </div>
   </main>
   

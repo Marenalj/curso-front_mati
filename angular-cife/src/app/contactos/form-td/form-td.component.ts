@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
 import { Curso, Turno, Sede, Alumno } from 'src/app/models/formulario.model';
 import { CURSOS, TURNOS, SEDES } from 'src/app/models/formulario.datos';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form-td',
@@ -14,15 +15,45 @@ export class FormTdComponent implements OnInit {
   turnos: Array<Turno>;
   sedes: Array<Sede>;
   alumno: Alumno;
+  @ViewChild('formCurso', {static: true}) formCurso: NgForm;
+  @ViewChild('refDlgConfirmar', {static: true}) dlgConfirmar: ElementRef;
+
 
   constructor() {
+  }
+
+  ngOnInit() {
     this.cursos = CURSOS;
     this.turnos = TURNOS;
     this.sedes = SEDES;
     this.alumno = new Alumno();
+    this.alumno.curso = null;
+    this.alumno.sede = null;
+    this.alumno.turno = null;
+
+    console.log(this.formCurso);
   }
 
-  ngOnInit() {
+  onSubmit(ev) {
+    ev.preventDefault();
+ 
+    this.dlgConfirmar.nativeElement.showDialog();
   }
 
+  onClickProbar(this.alumno = new Alumno('Pepe', 'Perez, 50284344Z',
+   'pp@sample.com', 'Curso@234', '2000-12-12', '', true, true,
+    null, null, null);
+
+  onClickDlg(ev: boolean) {
+    if (ev) {
+/*       console.log("Datos enviados");
+      this.alumno = new Alumno();
+      this.alumno.curso = null;
+      this.alumno.sede = null;
+      this.alumno.turno = null; */
+      this.formCurso.reset();
+  
+    }
+    this.dlgConfirmar.nativeElement.open = false;
+  }
 }

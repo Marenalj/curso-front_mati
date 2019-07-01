@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { from } from 'rxjs';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 registerLocaleData(localeEs);
@@ -17,6 +18,7 @@ registerLocaleData(localeEs);
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     FontAwesomeModule,
     AppRoutingModule,
     CoreModule

@@ -1,22 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostComponent } from './post.component';
+import { LibrosGoogleComponent } from './libros-google.component';
 
-describe('PostComponent', () => {
-  let component: PostComponent;
-  let fixture: ComponentFixture<PostComponent>;
+describe('LibrosGoogleComponent', () => {
+  let component: LibrosGoogleComponent;
+  let fixture: ComponentFixture<LibrosGoogleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostComponent ]
+      declarations: [ LibrosGoogleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PostComponent);
+    fixture = TestBed.createComponent(LibrosGoogleComponent);
     component = fixture.componentInstance;
-    component.post = new Post();
     fixture.detectChanges();
   });
 

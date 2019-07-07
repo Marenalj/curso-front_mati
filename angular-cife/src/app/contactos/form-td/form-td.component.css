@@ -37,3 +37,26 @@ fieldset {
     padding: 0.6rem;
 
 }
+
+.button-group  button:disabled {
+    font-weight: lighter;
+    color: burlywood;
+    background-color: rgb(97, 93, 93);
+    padding: 0.6rem;
+
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+dialog {
+    width: 80%;
+    border-color: gainsboro;
+    position: fixed;
+    top: 10%;
+    top: 20%;
+    left: 10%;
+}

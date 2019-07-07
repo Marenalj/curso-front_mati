@@ -7,8 +7,9 @@ const routes: Routes = [
   // { path: 'tareas', component: TareasComponent },
   { path: 'tareas', loadChildren: './tareas/tareas.module#TareasModule' },
   // { path: 'contactos', component: ContactosComponent },
-  { path: 'blog', loadChildren: './blog/blog.module#blogModule' },
-  { path: 'contactos', loadChildren: './contactos/contactos.module#ContactosModule' },
+  { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
+  { path: 'contactos', loadChildren: './about/about.module#aboutModule' },
+
   // { path: 'libros', component: LibrosComponent },
   { path: 'libros', loadChildren: './libros/libros.module#LibrosModule' },
   { path: '', pathMatch: 'full', redirectTo: 'home' },

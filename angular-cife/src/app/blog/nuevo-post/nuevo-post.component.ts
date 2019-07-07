@@ -19,7 +19,7 @@ export class NuevoPostComponent implements OnInit {
     this.post = new Post();
   }
 
-  OnClick() {
+  onClick() {
     this.eventGuardar.next(this.post);
     this.post = new Post();
   }

@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NuevoPostComponent } from './nuevo-post.component';
 
 describe('NuevoPostComponent', () => {

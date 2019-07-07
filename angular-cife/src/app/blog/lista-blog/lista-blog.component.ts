@@ -1,6 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { Post } from 'src/app/models/post.model';
 
 @Component({
   selector: 'app-lista-blog',

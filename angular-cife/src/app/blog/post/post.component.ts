@@ -13,7 +13,7 @@ export class PostComponent implements OnInit {
   @Output() eventBorrar: EventEmitter<any>;
 
   constructor() {
-    this.eventBorrar = new EventEmitter();
+    this.eventBorrar = new EventEmitter<number>;
    }
 
   ngOnInit() {}

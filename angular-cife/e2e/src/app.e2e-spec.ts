@@ -1,16 +1,16 @@
-import { HomePage } from './home.po';
+import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App Home page', () => {
-  let page: HomePage;
+describe('workspace-project App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new HomePage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Bienvenidos a Angular-CIFE!');
+    expect(page.getTitleText()).toEqual('Welcome to angular-cife!');
   });
 
   afterEach(async () => {

@@ -28,7 +28,7 @@ export class ListaSimpleComponent implements OnInit {
     this.aTareas = this.ls.readStorage(this.storageName);
     this.isOculto = false;
 
-    setInterval( () => this.isOculto = !this.isOculto, 2000)
+    setInterval {() => this.isOculto = !this.isOculto, 2000}
   }
 
   onClickAdd() {

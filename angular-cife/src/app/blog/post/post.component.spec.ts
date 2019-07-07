@@ -16,7 +16,6 @@ describe('PostComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PostComponent);
     component = fixture.componentInstance;
-    component.post = new Post();
     fixture.detectChanges();
   });
 

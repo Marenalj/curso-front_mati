@@ -79,7 +79,7 @@ CUERPO DEL DOCUMENTO
 
     <hr>
 
-    <!-- ETIQUETA PARA CREAR VÍNCULOS -->
+    <!-- ETIQUETA PARA CREAR VÍNCULOS (<a  es el ancla = anchore que ancla el enlace.-->
     
     <a href="#">Vínculo</a>
 
@@ -126,7 +126,8 @@ CUERPO DEL DOCUMENTO
     <table border="1">
         
         <thead>
-        <!--La etiqueta thead me permite dar los títulos de la tabla. Dentro de la tabla voy a poner las columnas que va a tener la tabla (con th) las filas que va a llevar la tabla (con tr) -->
+        <!-- Hacemos la primera fila.
+            La etiqueta thead me permite poner los títulos de la tabla. Dentro de la tabla voy a poner las columnas que va a tener la tabla (con th) las filas que va a llevar la tabla (con tr) -->
           <tr>
             <th>MES</th>
             <th>AHORRO</th>
@@ -151,7 +152,7 @@ CUERPO DEL DOCUMENTO
     
     </table>
 
-    <!-- ETIQUETA PARA CREAR MEDIDAS Y ESTADÍSTICAS <meter> Y <progress> -->
+    <!-- ETIQUETA PARA CREAR MEDIDAS Y ESTADÍSTICAS <meter>, esta etiqueta contiene los valores: el primero es el que ha alcanzado el alumno/a; el segundo es los puntos mínimos, el siguiente son los puntos máximos y el siguiente sería el valor alto de puntuación.        Y <progress> para sacar el progreso en determinados meses del año. Esta etiqueta permite que algunos navegadores en los que no se lee la etiqueta meter, lo puedan hacer gracias a la etiqueta progress. -->
     
     <h1>Resultados del Examen</h1>
     <p>Carlos: <meter value="94" min="0" max="100" high="90"></meter></p>
@@ -164,6 +165,33 @@ CUERPO DEL DOCUMENTO
     <p>Febrero: <progress value="60" min="0" max="100"></progress></p>
     <p>Marzo: <progress value="85" min="0" max="100"></progress></p>
     <p>Abril: <progress value="45" min="0" max="100"></progress></p>
+
+    <!-- El atributo auto, que carga el archivo de sonido cuando cargue la página; el atributo metadata= hace la precarga del archivo de audio cuando yo le dé play y el atributo none que le dice al navegador que no haga la precarga del archivo de sonido.-->
+
+<audio autoplay controls loop preload="auto"></audio>
+
+    <!--"audio", "metadata" o "none"-->
+
+    <!--El formato Ogg VORBIS es un formato de poco peso, mantine la calidad del sonido y es ideal para reducir el corto ancho de banda y la calidad del streaming.-->
+
+    <!--El formato MP3.mp3 es un archivo comprimido que resulta de una mayor o menor calidad de audio al final.-->
+
+
+    <!--El formato WAV.wav es un formato sin compresión. Calidad de audio pero consume mucho ancho de banda en internet.-->
+
+    <!--El archivo formato ACC y sus extensiones son: .m4a, .m4p, .mp4, .acc-->
+
+    <!--Conversor de audio: https://www.online-convert.com/es    donde puedes elegir la extensión y adjuntar el audio que quiero convertir y te genera un link de descarga.
+    Para reproducir ese archivo introduzco la etiqueta source src="" -->
+
+    <source src="./audio/audio.m4a" type="m4a">
+    <source src="./audio/audio.mp4" type="mp4">
+    <source src="./audio/audio.ogg" type="ogg">
+</audio>
+
+<!--Etiqueta de audio-->
+
+
 
     <!-- ETIQUETA PARA CREAR PIE DE PÁGINA -->
 

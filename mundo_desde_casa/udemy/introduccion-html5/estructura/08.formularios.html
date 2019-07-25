@@ -40,8 +40,7 @@ CUERPO DEL DOCUMENTO
     
 <body>
 
-    <!-- ETIQUETA PARA FORMULARIOS -->
-
+    <!-- ETIQUETA PARA FORMULARIOS : input=entrada;  placeholder= la guía que le puedo dar al usuario para decirle el tipo de entrada que voy a utilizar (nombre, apellido...). Podría llevar otro atributo que sería    <readonly> que significa sólo lectura. El usuario no podría interactuar con él. -->
     <center>
         <h3>Formulario</h3>
         <form>
@@ -68,7 +67,7 @@ CUERPO DEL DOCUMENTO
             
             <br>
             <br>
-            
+            <!--select es un selector de etiqueta múltiple. Las option se ponen dentro de la etiqueta select-->
             <select>
                 <option>Opcion 1</option>
                 <option>Opcion 2</option>
@@ -78,6 +77,7 @@ CUERPO DEL DOCUMENTO
             <br>
             <br>
             
+           <!--Etiqueta checkbox, dentro de un input para cambiarles el color. El checkbox permite elegir de forma múltiple. Es decir, puedes seleccionar más de una.--> 
             <input type="checkbox" id="rojo"><label for="rojo">Rojo</label>
             <input type="checkbox" id="amarillo"><label for="amarillo">Amarillo</label>
             <input type="checkbox" id="verde"><label for="verde">Verde</label>
@@ -85,12 +85,15 @@ CUERPO DEL DOCUMENTO
             <br>
             <br>
             
+        <!-- input de tipo radio. Permite al usuario seleccionar entre estas dos opciones: Blanco o Negro. Sólo me deja elegir una de las dos opciones. name="radio" (x ejem) se utiliza cuando se va a enviar el formulario. name es el nombre que va a identificar a estos dos input de tipo radio. este atributo radio te va a limitar a elegir/seleccionar sólo uno de los dos input porque los dos tienen el mismo atributo name.
+        Si pongo checked después del name="radio" automáticamente te va a elegir ese input (Blanco)-->
             <input type="radio" id="blanco" name="radio" checked><label for="blanco">Blanco</label>
             <input type="radio" id="negro" name="radio"><label for="negro">Negro</label>
             
             <br>
             <br>
-            
+        
+          <!--Botón de envío. value es el texto que va a aparecer en ese botón.-->  
             <input type="submit" value="Enviar Formulario">
             
         </form>

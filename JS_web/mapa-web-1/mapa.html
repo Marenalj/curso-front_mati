@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3e13WFpXtGvf4XKSnmyS-3XqiDYbMxpo&callback=initMap"></script>
+    <script src="./js/controller.js" type="module"></script>
+    <title>Mapa de muestra</title>
+</head>
+<body>
+    <header>
+    <div id="content" class="site-content">
+        <div class="ap-full-width">
+            <div id="primary" class="content">           
+            <header class="meter-header">
+            <h1 class="entry-title">Mapa de Farmacias</h1>           
+            <h2>"Aquí se mostrarán próximamente las Farmacias asociadas a &nbsp;&nbsp; <img class"fcuidarte" src="./assets/cuidarte.JPG" width="40" height="40"> y los servicios disponibles" </h2>
+    </header> 
+            <div class="row">
+                <div id="map">
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=ESCRIBE_AQUI_TU_API_KEY&callback=initMap">
+                    </script>
+                <div class="column2">
+                    <img src="./assets/presión arterial.png">Presión arterial</a> <img src="./assets/peso.png">Peso</a> <img src="./assets/masa corporal.png">Índice de Masa Corporal</a> <img src="./assets/uricemia.png">Uricemia</a> <img src="./assets/trigliceridemia.png">Trigliceridemia</a> <img src="./assets/perfil lipidico.png">Perfil Lipídico</a> <img src="./assets/perfil hepatico.png">Perfil Hepático</a></tr>
+                </div>
+
+                <div class="column3">
+                    <img src="./assets/control gucémico.png">Perfil Glucémico</a> <img src="./assets/nivel glucosa.png">Nivel Promedio</a> <img src="./assets/lactato en sangre.png">Lactato en sangre</a> <img src="./assets/colesterolemia.png">Colesterolemia</a> <img src="./assets/GPT.png">GPT</a> <img src="./assets/altura.png">Altura</a> <img src="./assets/colesterol total.png">Colesterol Total</a>
+                </div>       
+                </div>         
+            </div>
+            </div>
+        </div>
+        <div panel map>
+            <!--Botones "Mapa" y "Satélite" del interior del mapa.-->
+            <div class="button-map"></div>
+                <div mapa="button" tabindex="0" title="Muestra el callejero"></div>
+            <div class="button-satelite"></div>
+                <div satelite="button" tabindex="0" title="Muestra las imágenes de satélite"></div>
+            
+                <button draggable="false" title="Cambiar a pantalla completa"></button>   
+        </div>  
+    </div>
+    <!-- The div element for the map -->
+   
+    
+</body>
+</html>

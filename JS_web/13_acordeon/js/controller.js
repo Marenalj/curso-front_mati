@@ -7,6 +7,7 @@ export function controller () {
     // 1. Referencia a los Nodos del DOM que me interesan
 
     const aNodosQuestion = document.querySelectorAll('.question')
+    
 /*     const aNodosRespuesta = document.querySelectorAll('.respuesta') */
     console.dir(aNodosQuestion)
 

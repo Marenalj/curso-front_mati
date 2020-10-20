@@ -1,0 +1,120 @@
+
+
+ .container {
+     max-width: 100%;
+
+
+
+     #map {
+      width: 100%!important;
+      height: 34.6875rem;
+      background-color: grey;
+  }
+
+
+
+
+/* body full container{
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+display: flex;
+}
+ */
+ /* }
+
+  div map {      
+  color: #404449;
+  font: 400 11px Roboto, Arial, sans-serif;
+  cursor: url("https://maps.gstatic.com/mapfiles/openhand_8_8.cur"), default;
+  box-sizing: inherit;
+  z-index: 3;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  border-width: 0px;
+  margin: 0px;
+  left: 0px;
+  top: 0px;
+  touch-action: pan-x pan-y;
+  } */
+
+
+
+  /* div map {
+    float: left;
+    width: 56%!important;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+ */
+  /* #div col-sm-6 col-md-6 col-lg-6 col-xl-6 {
+    width: 19%!important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+} */
+
+/*   div col-sm-6 col-md-6 col-lg-6 col-xl-6 {
+    width: 19%!important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+} */
+
+/* button draggable {
+-webkit-user-drag: none;
+box-sizing: inherit;
+font-family: inherit;
+line-height: 1.15;
+color: #FFF;
+text-transform: uppercase;
+font-size: 0.75rem;
+outline: 0;
+-webkit-appearance: button;
+white-space: inherit;
+background: none rgb(255, 255, 255);
+border: 0px;
+margin: 10px;
+padding: 0px;
+position: absolute;
+cursor: pointer;
+user-select: none;
+border-radius: 2px;
+height: 40px;
+width: 40px;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+overflow: hidden;
+top: 0px;
+right: 0px;
+
+}
+
+div class button-satelite {
+    
+font: 400 11px Roboto, Arial, sans-serif;
+cursor: pointer;
+-webkit-user-drag: none;
+font-weight: 400;
+box-sizing: border-box;
+direction: ltr;
+overflow: hidden;
+text-align: center;
+height: 40px;
+display: table-cell;
+vertical-align: middle;
+position: relative;
+color: rgb(86, 86, 86);
+font-family: Roboto, Arial, sans-serif;
+user-select: none;
+font-size: 18px;
+background-color: rgb(255, 255, 255);
+padding: 0px 17px;
+border-bottom-right-radius: 2px;
+border-top-right-radius: 2px;
+background-clip: padding-box;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+min-width: 62px;
+border-left: 0px;
+}
+
+ */

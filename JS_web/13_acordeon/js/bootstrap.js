@@ -9,6 +9,7 @@ import {controller} from  './controller.js'
     console.log('APP ejecutándose')
 } */
 
+
 // Es buena práctica crear un módulo aparte e importar la función principal
 
 document.addEventListener('DOMContentLoaded', controller)

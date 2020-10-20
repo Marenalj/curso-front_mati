@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="./js/controller.js" type="module"></script>
+        <link rel="stylesheet" href="./style.css">
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLS3xmyhWmeJ7gvHpw9828zPRApr_IG3c&callback=initMap">
+        </script>
+    <title>Mapa de muestra</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <header>
+
+                </header>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <header>
+                            <div id="content" class="site-content">
+                                <div class="ap-full-width">
+                                    <header class="meter-header">
+                                        <h1 class="entry-title">Mapa de Farmacias</h1>
+                                        <h2>"Aquí se mostrarán próximamente las Farmacias asociadas a &nbsp;&nbsp; <img
+                                                class="fcuidarte" src="./assets/cuidarte.JPG" width="40" height="40"> y
+                                            los servicios disponibles" </h2>
+                                </div>
+                                <div class="Localizar"><h2>Localiza tu Farmacia&nbsp;&nbsp; <img class="fcuidarte" src="./assets/cuidarte.JPG"width="40" height="40">donde puedes tomarte las siguientes medidas</h2>
+                                    
+                                </div>
+                            </div>
+                            <header>
+                                <div id="map"></div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <article id="column2">
+                        <div class="row1">
+                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <img src="./assets/presión arterial.png">Presión arterial</a>
+                                <img src="./assets/peso.png">Peso</a></br>
+                                <img src="./assets/masa corporal.png">Índice de Masa Corporal</a>
+                                <img src="./assets/uricemia.png">Uricemia</a>
+                                <img src="./assets/trigliceridemia.png">Trigliceridemia</a>
+                                <img src="./assets/perfil lipidico.png">Perfil Lipídico</a>
+                                <img src="./assets/perfil hepatico.png">Perfil Hepático</a>
+                            </div>
+                        </div>   
+                        </article>
+                        <article id="column3">
+                                <div class="row1">
+                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <img src="./assets/control gucémico.png">Perfil Glucémico</a>
+                                <img src="./assets/nivel glucosa.png">Nivel Promedio</a>
+                                <img src="./assets/lactato en sangre.png">Lactato en sangre</a>
+                                <img src="./assets/colesterolemia.png">Colesterolemia</a>
+                                <img src="./assets/GPT.png">GPT</a></br>
+                                <img src="./assets/altura.png">Altura</a></br>
+                                <img src="./assets/colesterol total.png">Colesterol Total</a>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+                </div>
+
+
+
+                <!--      <div panel map>
+        Botones "Mapa" y "Satélite" y img pantalla completa del interior del mapa.
+                <div class="button-map"></div>
+                <section>
+                    <button type="button" id="btn-mostrar" title="Muestra el callejero">Mapa</button>
+                    <button type="button" tabindex="0" title="Muestra las imágenes de satélite">Satélite</button>
+                    <button draggable="false" title="Cambiar a pantalla completa"><img src="./assets/img src="imagen.png id="miimagen"></button>   
+                </section>
+                </div>  
+                <div class="column2">
+                    <img src="./assets/presión arterial.png">Presión arterial</a> 
+                    <img src="./assets/peso.png">Peso</a> 
+                    <img src="./assets/masa corporal.png">Índice de Masa Corporal</a> 
+                    <img src="./assets/uricemia.png">Uricemia</a> 
+                    <img src="./assets/trigliceridemia.png">Trigliceridemia</a> 
+                    <img src="./assets/perfil lipidico.png">Perfil Lipídico</a>
+                    <img src="./assets/perfil hepatico.png">Perfil Hepático</a>
+                </div>
+                <div class="column3">
+                    <img src="./assets/control gucémico.png">Perfil Glucémico</a> <img src="./assets/nivel glucosa.png">Nivel Promedio</a> <img src="./assets/lactato en sangre.png">Lactato en sangre</a> <img src="./assets/colesterolemia.png">Colesterolemia</a> <img src="./assets/GPT.png">GPT</a> <img src="./assets/altura.png">Altura</a> <img src="./assets/colesterol total.png">Colesterol Total</a>
+                </div>
+          </div>         
+      </div>
+      
+
+    </div>  -->
+                <style>
+                    #map {
+                        width: 100%;
+                        height: 400px;
+                        background-color: grey;
+                    }
+                </style>
+
+                <script>
+                    // Initialize and add the map
+                    function initMap() {
+                        // The location of Uluru
+                        var uluru = { lat: 40.984543, lng: -3.596453 };
+                        // The map, centered at Uluru
+                        var map = new google.maps.Map(
+                            document.getElementById('map'), { zoom: 5, center: { lat: 40.984543, lng: -3.596453 } });
+                        // The marker, positioned at Uluru
+                        var marker = new google.maps.Marker(
+                            {
+                                position: uluru,
+                                map: map
+                            }
+                        );
+                    }
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3e13WFpXtGvf4XKSnmyS-3XqiDYbMxpo&callback=initMap">
+                    </script>
+</body>
+
+</html>
